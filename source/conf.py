@@ -12,6 +12,7 @@
 #
 import os
 import sys
+sys.path.insert(0, os.path.abspath('./_ext'))
 sys.path.append(os.path.abspath('../../tods'))
 sys.path.append(os.path.abspath('../../'))
 
@@ -57,7 +58,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'doctree'
+master_doc = 'index'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -74,12 +75,18 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_show_sourcelink = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-html_sidebars = {
-   '**': ['fulltoc.html', 'sourcelink.html', 'searchbox.html']
-}
+html_logo = "img/tods_menu_logo.png"
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
 
+}
+html_sidebars = {
+   '**': ['fulltoc.html', 'sourcelink.html', 'searchbox.html', 'srclink.html']
+}

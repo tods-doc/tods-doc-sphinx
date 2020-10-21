@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tods.feature_analysis package &mdash; TODS 0.0.1 documentation</title>
+  <title>tods.feature_analysis module &mdash; TODS 0.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="tods.detection_algorithm package" href="tods.detection_algorithm.html" />
-    <link rel="prev" title="tods.timeseries_processing package" href="tods.timeseries_processing.html" /> 
+    <link rel="next" title="tods.detection_algorithm Module" href="tods.detection_algorithm.html" />
+    <link rel="prev" title="tods.timeseries_processing module" href="tods.timeseries_processing.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,45 +89,43 @@
 </ul>
 <p class="caption"><span class="caption-text">API Documents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="tods.data_processing.html">tods.data_processing package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tods.timeseries_processing.html">tods.timeseries_processing package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">tods.feature_analysis package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-autocorrelation-module">tods.feature_analysis.AutoCorrelation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-bkfilter-module">tods.feature_analysis.BKFilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-discretecosinetransform-module">tods.feature_analysis.DiscreteCosineTransform module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-fastfouriertransform-module">tods.feature_analysis.FastFourierTransform module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-hpfilter-module">tods.feature_analysis.HPFilter module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-nonnegativematrixfactorization-module">tods.feature_analysis.NonNegativeMatrixFactorization module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-sktruncatedsvd-module">tods.feature_analysis.SKTruncatedSVD module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-spectralresidualtransform-module">tods.feature_analysis.SpectralResidualTransform module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalabsenergy-module">tods.feature_analysis.StatisticalAbsEnergy module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalabssum-module">tods.feature_analysis.StatisticalAbsSum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalgmean-module">tods.feature_analysis.StatisticalGmean module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalhmean-module">tods.feature_analysis.StatisticalHmean module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalkurtosis-module">tods.feature_analysis.StatisticalKurtosis module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmaximum-module">tods.feature_analysis.StatisticalMaximum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmean-module">tods.feature_analysis.StatisticalMean module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeanabs-module">tods.feature_analysis.StatisticalMeanAbs module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeanabstemporalderivative-module">tods.feature_analysis.StatisticalMeanAbsTemporalDerivative module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeantemporalderivative-module">tods.feature_analysis.StatisticalMeanTemporalDerivative module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmedian-module">tods.feature_analysis.StatisticalMedian module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmedianabsolutedeviation-module">tods.feature_analysis.StatisticalMedianAbsoluteDeviation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalminimum-module">tods.feature_analysis.StatisticalMinimum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalskew-module">tods.feature_analysis.StatisticalSkew module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalstd-module">tods.feature_analysis.StatisticalStd module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvar-module">tods.feature_analysis.StatisticalVar module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvariation-module">tods.feature_analysis.StatisticalVariation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvecsum-module">tods.feature_analysis.StatisticalVecSum module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalwillisonamplitude-module">tods.feature_analysis.StatisticalWillisonAmplitude module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalzerocrossing-module">tods.feature_analysis.StatisticalZeroCrossing module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-trmf-module">tods.feature_analysis.TRMF module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-wavelettransform-module">tods.feature_analysis.WaveletTransform module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tods.data_processing.html">tods.data_processing module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tods.timeseries_processing.html">tods.timeseries_processing module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tods.feature_analysis module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-autocorrelation">tods.feature_analysis.AutoCorrelation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-bkfilter">tods.feature_analysis.BKFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-discretecosinetransform">tods.feature_analysis.DiscreteCosineTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-fastfouriertransform">tods.feature_analysis.FastFourierTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-hpfilter">tods.feature_analysis.HPFilter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-nonnegativematrixfactorization">tods.feature_analysis.NonNegativeMatrixFactorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-sktruncatedsvd">tods.feature_analysis.SKTruncatedSVD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-spectralresidualtransform">tods.feature_analysis.SpectralResidualTransform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalabsenergy">tods.feature_analysis.StatisticalAbsEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalabssum">tods.feature_analysis.StatisticalAbsSum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalgmean">tods.feature_analysis.StatisticalGmean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalhmean">tods.feature_analysis.StatisticalHmean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalkurtosis">tods.feature_analysis.StatisticalKurtosis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmaximum">tods.feature_analysis.StatisticalMaximum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmean">tods.feature_analysis.StatisticalMean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeanabs">tods.feature_analysis.StatisticalMeanAbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeanabstemporalderivative">tods.feature_analysis.StatisticalMeanAbsTemporalDerivative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmeantemporalderivative">tods.feature_analysis.StatisticalMeanTemporalDerivative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmedian">tods.feature_analysis.StatisticalMedian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalmedianabsolutedeviation">tods.feature_analysis.StatisticalMedianAbsoluteDeviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalminimum">tods.feature_analysis.StatisticalMinimum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalskew">tods.feature_analysis.StatisticalSkew</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalstd">tods.feature_analysis.StatisticalStd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvar">tods.feature_analysis.StatisticalVar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvariation">tods.feature_analysis.StatisticalVariation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalvecsum">tods.feature_analysis.StatisticalVecSum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalwillisonamplitude">tods.feature_analysis.StatisticalWillisonAmplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-statisticalzerocrossing">tods.feature_analysis.StatisticalZeroCrossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-trmf">tods.feature_analysis.TRMF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-feature-analysis-wavelettransform">tods.feature_analysis.WaveletTransform</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tods.detection_algorithm.html">tods.detection_algorithm package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tods.reinforcement.html">tods.reinforcement package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tods.detection_algorithm.html">tods.detection_algorithm Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tods.reinforcement.html">tods.reinforcement module</a></li>
 </ul>
 
             
@@ -174,7 +172,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>tods.feature_analysis package</li>
+      <li>tods.feature_analysis module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,13 +189,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tods-feature-analysis-package">
-<h1>tods.feature_analysis package<a class="headerlink" href="#tods-feature-analysis-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tods-feature-analysis-autocorrelation-module">
-<h2>tods.feature_analysis.AutoCorrelation module<a class="headerlink" href="#tods-feature-analysis-autocorrelation-module" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="tods-feature-analysis-module">
+<h1>tods.feature_analysis module<a class="headerlink" href="#tods-feature-analysis-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tods-feature-analysis-autocorrelation">
+<h2>tods.feature_analysis.AutoCorrelation<a class="headerlink" href="#tods-feature-analysis-autocorrelation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.AutoCorrelation.</code><code class="sig-name descname">AutoCorrelation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -280,8 +275,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-bkfilter-module">
-<h2>tods.feature_analysis.BKFilter module<a class="headerlink" href="#tods-feature-analysis-bkfilter-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-bkfilter">
+<h2>tods.feature_analysis.BKFilter<a class="headerlink" href="#tods-feature-analysis-bkfilter" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.BKFilter.</code><code class="sig-name descname">BKFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -378,8 +373,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-discretecosinetransform-module">
-<h2>tods.feature_analysis.DiscreteCosineTransform module<a class="headerlink" href="#tods-feature-analysis-discretecosinetransform-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-discretecosinetransform">
+<h2>tods.feature_analysis.DiscreteCosineTransform<a class="headerlink" href="#tods-feature-analysis-discretecosinetransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.DiscreteCosineTransform.</code><code class="sig-name descname">DiscreteCosineTransform</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -489,8 +484,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-fastfouriertransform-module">
-<h2>tods.feature_analysis.FastFourierTransform module<a class="headerlink" href="#tods-feature-analysis-fastfouriertransform-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-fastfouriertransform">
+<h2>tods.feature_analysis.FastFourierTransform<a class="headerlink" href="#tods-feature-analysis-fastfouriertransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.FastFourierTransform.</code><code class="sig-name descname">FastFourierTransform</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -600,8 +595,8 @@ These values correspnd to the absolute and angle values for a complex number we 
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-hpfilter-module">
-<h2>tods.feature_analysis.HPFilter module<a class="headerlink" href="#tods-feature-analysis-hpfilter-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-hpfilter">
+<h2>tods.feature_analysis.HPFilter<a class="headerlink" href="#tods-feature-analysis-hpfilter" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.HPFilter.</code><code class="sig-name descname">HPFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -696,8 +691,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-nonnegativematrixfactorization-module">
-<h2>tods.feature_analysis.NonNegativeMatrixFactorization module<a class="headerlink" href="#tods-feature-analysis-nonnegativematrixfactorization-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-nonnegativematrixfactorization">
+<h2>tods.feature_analysis.NonNegativeMatrixFactorization<a class="headerlink" href="#tods-feature-analysis-nonnegativematrixfactorization" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.NonNegativeMatrixFactorization.</code><code class="sig-name descname">NonNegativeMatrixFactorization</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -843,8 +838,8 @@ primitive should raise a <code class="docutils literal notranslate"><span class=
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-sktruncatedsvd-module">
-<h2>tods.feature_analysis.SKTruncatedSVD module<a class="headerlink" href="#tods-feature-analysis-sktruncatedsvd-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-sktruncatedsvd">
+<h2>tods.feature_analysis.SKTruncatedSVD<a class="headerlink" href="#tods-feature-analysis-sktruncatedsvd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.SKTruncatedSVD.</code><code class="sig-name descname">SKTruncatedSVD</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1013,8 +1008,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-spectralresidualtransform-module">
-<h2>tods.feature_analysis.SpectralResidualTransform module<a class="headerlink" href="#tods-feature-analysis-spectralresidualtransform-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-spectralresidualtransform">
+<h2>tods.feature_analysis.SpectralResidualTransform<a class="headerlink" href="#tods-feature-analysis-spectralresidualtransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.SpectralResidualTransform.</code><code class="sig-name descname">SpectralResidualTransformPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1096,8 +1091,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalabsenergy-module">
-<h2>tods.feature_analysis.StatisticalAbsEnergy module<a class="headerlink" href="#tods-feature-analysis-statisticalabsenergy-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalabsenergy">
+<h2>tods.feature_analysis.StatisticalAbsEnergy<a class="headerlink" href="#tods-feature-analysis-statisticalabsenergy" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalAbsEnergy.</code><code class="sig-name descname">StatisticalAbsEnergyPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1179,8 +1174,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalabssum-module">
-<h2>tods.feature_analysis.StatisticalAbsSum module<a class="headerlink" href="#tods-feature-analysis-statisticalabssum-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalabssum">
+<h2>tods.feature_analysis.StatisticalAbsSum<a class="headerlink" href="#tods-feature-analysis-statisticalabssum" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalAbsSum.</code><code class="sig-name descname">StatisticalAbsSumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1262,8 +1257,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalgmean-module">
-<h2>tods.feature_analysis.StatisticalGmean module<a class="headerlink" href="#tods-feature-analysis-statisticalgmean-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalgmean">
+<h2>tods.feature_analysis.StatisticalGmean<a class="headerlink" href="#tods-feature-analysis-statisticalgmean" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalGmean.</code><code class="sig-name descname">StatisticalGmeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1346,8 +1341,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalhmean-module">
-<h2>tods.feature_analysis.StatisticalHmean module<a class="headerlink" href="#tods-feature-analysis-statisticalhmean-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalhmean">
+<h2>tods.feature_analysis.StatisticalHmean<a class="headerlink" href="#tods-feature-analysis-statisticalhmean" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalHmean.</code><code class="sig-name descname">StatisticalHmeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1432,8 +1427,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalkurtosis-module">
-<h2>tods.feature_analysis.StatisticalKurtosis module<a class="headerlink" href="#tods-feature-analysis-statisticalkurtosis-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalkurtosis">
+<h2>tods.feature_analysis.StatisticalKurtosis<a class="headerlink" href="#tods-feature-analysis-statisticalkurtosis" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalKurtosis.</code><code class="sig-name descname">StatisticalKurtosisPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1515,8 +1510,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmaximum-module">
-<h2>tods.feature_analysis.StatisticalMaximum module<a class="headerlink" href="#tods-feature-analysis-statisticalmaximum-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmaximum">
+<h2>tods.feature_analysis.StatisticalMaximum<a class="headerlink" href="#tods-feature-analysis-statisticalmaximum" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMaximum.</code><code class="sig-name descname">StatisticalMaximumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1598,8 +1593,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmean-module">
-<h2>tods.feature_analysis.StatisticalMean module<a class="headerlink" href="#tods-feature-analysis-statisticalmean-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmean">
+<h2>tods.feature_analysis.StatisticalMean<a class="headerlink" href="#tods-feature-analysis-statisticalmean" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMean.</code><code class="sig-name descname">StatisticalMeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1681,8 +1676,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmeanabs-module">
-<h2>tods.feature_analysis.StatisticalMeanAbs module<a class="headerlink" href="#tods-feature-analysis-statisticalmeanabs-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmeanabs">
+<h2>tods.feature_analysis.StatisticalMeanAbs<a class="headerlink" href="#tods-feature-analysis-statisticalmeanabs" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanAbs.</code><code class="sig-name descname">StatisticalMeanAbsPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1764,8 +1759,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmeanabstemporalderivative-module">
-<h2>tods.feature_analysis.StatisticalMeanAbsTemporalDerivative module<a class="headerlink" href="#tods-feature-analysis-statisticalmeanabstemporalderivative-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmeanabstemporalderivative">
+<h2>tods.feature_analysis.StatisticalMeanAbsTemporalDerivative<a class="headerlink" href="#tods-feature-analysis-statisticalmeanabstemporalderivative" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanAbsTemporalDerivative.</code><code class="sig-name descname">StatisticalMeanAbsTemporalDerivativePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1847,8 +1842,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmeantemporalderivative-module">
-<h2>tods.feature_analysis.StatisticalMeanTemporalDerivative module<a class="headerlink" href="#tods-feature-analysis-statisticalmeantemporalderivative-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmeantemporalderivative">
+<h2>tods.feature_analysis.StatisticalMeanTemporalDerivative<a class="headerlink" href="#tods-feature-analysis-statisticalmeantemporalderivative" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanTemporalDerivative.</code><code class="sig-name descname">StatisticalMeanTemporalDerivativePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1930,8 +1925,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmedian-module">
-<h2>tods.feature_analysis.StatisticalMedian module<a class="headerlink" href="#tods-feature-analysis-statisticalmedian-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmedian">
+<h2>tods.feature_analysis.StatisticalMedian<a class="headerlink" href="#tods-feature-analysis-statisticalmedian" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMedian.</code><code class="sig-name descname">StatisticalMedianPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2013,8 +2008,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalmedianabsolutedeviation-module">
-<h2>tods.feature_analysis.StatisticalMedianAbsoluteDeviation module<a class="headerlink" href="#tods-feature-analysis-statisticalmedianabsolutedeviation-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalmedianabsolutedeviation">
+<h2>tods.feature_analysis.StatisticalMedianAbsoluteDeviation<a class="headerlink" href="#tods-feature-analysis-statisticalmedianabsolutedeviation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMedianAbsoluteDeviation.</code><code class="sig-name descname">StatisticalMedianAbsoluteDeviationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2096,8 +2091,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalminimum-module">
-<h2>tods.feature_analysis.StatisticalMinimum module<a class="headerlink" href="#tods-feature-analysis-statisticalminimum-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalminimum">
+<h2>tods.feature_analysis.StatisticalMinimum<a class="headerlink" href="#tods-feature-analysis-statisticalminimum" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMinimum.</code><code class="sig-name descname">StatisticalMinimumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2179,8 +2174,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalskew-module">
-<h2>tods.feature_analysis.StatisticalSkew module<a class="headerlink" href="#tods-feature-analysis-statisticalskew-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalskew">
+<h2>tods.feature_analysis.StatisticalSkew<a class="headerlink" href="#tods-feature-analysis-statisticalskew" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalSkew.</code><code class="sig-name descname">StatisticalSkewPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2262,8 +2257,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalstd-module">
-<h2>tods.feature_analysis.StatisticalStd module<a class="headerlink" href="#tods-feature-analysis-statisticalstd-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalstd">
+<h2>tods.feature_analysis.StatisticalStd<a class="headerlink" href="#tods-feature-analysis-statisticalstd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalStd.</code><code class="sig-name descname">StatisticalStdPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2345,8 +2340,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalvar-module">
-<h2>tods.feature_analysis.StatisticalVar module<a class="headerlink" href="#tods-feature-analysis-statisticalvar-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalvar">
+<h2>tods.feature_analysis.StatisticalVar<a class="headerlink" href="#tods-feature-analysis-statisticalvar" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVar.</code><code class="sig-name descname">StatisticalVarPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2428,8 +2423,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalvariation-module">
-<h2>tods.feature_analysis.StatisticalVariation module<a class="headerlink" href="#tods-feature-analysis-statisticalvariation-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalvariation">
+<h2>tods.feature_analysis.StatisticalVariation<a class="headerlink" href="#tods-feature-analysis-statisticalvariation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVariation.</code><code class="sig-name descname">StatisticalVariationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2511,8 +2506,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalvecsum-module">
-<h2>tods.feature_analysis.StatisticalVecSum module<a class="headerlink" href="#tods-feature-analysis-statisticalvecsum-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalvecsum">
+<h2>tods.feature_analysis.StatisticalVecSum<a class="headerlink" href="#tods-feature-analysis-statisticalvecsum" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVecSum.</code><code class="sig-name descname">StatisticalVecSumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2594,8 +2589,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalwillisonamplitude-module">
-<h2>tods.feature_analysis.StatisticalWillisonAmplitude module<a class="headerlink" href="#tods-feature-analysis-statisticalwillisonamplitude-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalwillisonamplitude">
+<h2>tods.feature_analysis.StatisticalWillisonAmplitude<a class="headerlink" href="#tods-feature-analysis-statisticalwillisonamplitude" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalWillisonAmplitude.</code><code class="sig-name descname">StatisticalWillisonAmplitudePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2677,8 +2672,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-statisticalzerocrossing-module">
-<h2>tods.feature_analysis.StatisticalZeroCrossing module<a class="headerlink" href="#tods-feature-analysis-statisticalzerocrossing-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-statisticalzerocrossing">
+<h2>tods.feature_analysis.StatisticalZeroCrossing<a class="headerlink" href="#tods-feature-analysis-statisticalzerocrossing" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalZeroCrossing.</code><code class="sig-name descname">StatisticalZeroCrossingPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2760,8 +2755,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-trmf-module">
-<h2>tods.feature_analysis.TRMF module<a class="headerlink" href="#tods-feature-analysis-trmf-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-trmf">
+<h2>tods.feature_analysis.TRMF<a class="headerlink" href="#tods-feature-analysis-trmf" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.TRMF.</code><code class="sig-name descname">TRMF</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2886,8 +2881,8 @@ That helps to avoid big deviations when forecasting.</p></li>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-feature-analysis-wavelettransform-module">
-<h2>tods.feature_analysis.WaveletTransform module<a class="headerlink" href="#tods-feature-analysis-wavelettransform-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-feature-analysis-wavelettransform">
+<h2>tods.feature_analysis.WaveletTransform<a class="headerlink" href="#tods-feature-analysis-wavelettransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.WaveletTransform.</code><code class="sig-name descname">WaveletTransformer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2987,9 +2982,6 @@ Ordered frame of coefficients arrays where n denotes the level of decomposition.
 </dd></dl>
 
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
@@ -3000,10 +2992,10 @@ Ordered frame of coefficients arrays where n denotes the level of decomposition.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tods.detection_algorithm.html" class="btn btn-neutral float-right" title="tods.detection_algorithm package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tods.detection_algorithm.html" class="btn btn-neutral float-right" title="tods.detection_algorithm Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tods.timeseries_processing.html" class="btn btn-neutral float-left" title="tods.timeseries_processing package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tods.timeseries_processing.html" class="btn btn-neutral float-left" title="tods.timeseries_processing module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

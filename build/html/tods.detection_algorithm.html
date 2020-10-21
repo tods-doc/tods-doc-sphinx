@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>tods.detection_algorithm package &mdash; TODS 0.0.1 documentation</title>
+  <title>tods.detection_algorithm Module &mdash; TODS 0.0.1 documentation</title>
   
 
   
@@ -92,31 +92,29 @@
 <li class="toctree-l1"><a class="reference internal" href="tods.data_processing.html">tods.data_processing package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tods.timeseries_processing.html">tods.timeseries_processing package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tods.feature_analysis.html">tods.feature_analysis package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">tods.detection_algorithm package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-autoregodetect-module">tods.detection_algorithm.AutoRegODetect module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-deeplog-module">tods.detection_algorithm.DeepLog module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-kdiscordodetect-module">tods.detection_algorithm.KDiscordODetect module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-lstmodetect-module">tods.detection_algorithm.LSTMODetect module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-matrixprofile-module">tods.detection_algorithm.MatrixProfile module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pcaodetect-module">tods.detection_algorithm.PCAODetect module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodabod-module">tods.detection_algorithm.PyodABOD module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodae-module">tods.detection_algorithm.PyodAE module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodcblof-module">tods.detection_algorithm.PyodCBLOF module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodcof-module">tods.detection_algorithm.PyodCOF module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodhbos-module">tods.detection_algorithm.PyodHBOS module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodisolationforest-module">tods.detection_algorithm.PyodIsolationForest module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodknn-module">tods.detection_algorithm.PyodKNN module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodloda-module">tods.detection_algorithm.PyodLODA module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodlof-module">tods.detection_algorithm.PyodLOF module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodmogaal-module">tods.detection_algorithm.PyodMoGaal module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodocsvm-module">tods.detection_algorithm.PyodOCSVM module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodsod-module">tods.detection_algorithm.PyodSOD module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodsogaal-module">tods.detection_algorithm.PyodSoGaal module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodvae-module">tods.detection_algorithm.PyodVAE module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-telemanom-module">tods.detection_algorithm.Telemanom module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-uodbaseprimitive-module">tods.detection_algorithm.UODBasePrimitive module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tods.detection_algorithm Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-autoregodetect">tods.detection_algorithm.AutoRegODetect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-deeplog">tods.detection_algorithm.DeepLog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-kdiscordodetect">tods.detection_algorithm.KDiscordODetect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-lstmodetect">tods.detection_algorithm.LSTMODetect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-matrixprofile">tods.detection_algorithm.MatrixProfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pcaodetect">tods.detection_algorithm.PCAODetect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodabod">tods.detection_algorithm.PyodABOD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodae">tods.detection_algorithm.PyodAE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodcblof">tods.detection_algorithm.PyodCBLOF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodcof">tods.detection_algorithm.PyodCOF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodhbos">tods.detection_algorithm.PyodHBOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodisolationforest">tods.detection_algorithm.PyodIsolationForest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodknn">tods.detection_algorithm.PyodKNN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodloda">tods.detection_algorithm.PyodLODA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodlof">tods.detection_algorithm.PyodLOF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodmogaal">tods.detection_algorithm.PyodMoGaal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodocsvm">tods.detection_algorithm.PyodOCSVM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodsod">tods.detection_algorithm.PyodSOD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodsogaal">tods.detection_algorithm.PyodSoGaal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-pyodvae">tods.detection_algorithm.PyodVAE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-telemanom">tods.detection_algorithm.Telemanom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tods-detection-algorithm-uodbaseprimitive">tods.detection_algorithm.UODBasePrimitive</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tods.reinforcement.html">tods.reinforcement package</a></li>
@@ -166,7 +164,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>tods.detection_algorithm package</li>
+      <li>tods.detection_algorithm Module</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,13 +181,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tods-detection-algorithm-package">
-<h1>tods.detection_algorithm package<a class="headerlink" href="#tods-detection-algorithm-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="tods-detection-algorithm-autoregodetect-module">
-<h2>tods.detection_algorithm.AutoRegODetect module<a class="headerlink" href="#tods-detection-algorithm-autoregodetect-module" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="tods-detection-algorithm-module">
+<h1>tods.detection_algorithm Module<a class="headerlink" href="#tods-detection-algorithm-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tods-detection-algorithm-autoregodetect">
+<h2>tods.detection_algorithm.AutoRegODetect<a class="headerlink" href="#tods-detection-algorithm-autoregodetect" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.AutoRegODetect.</code><code class="sig-name descname">AutoRegODetector</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -391,11 +386,11 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-deeplog-module">
-<h2>tods.detection_algorithm.DeepLog module<a class="headerlink" href="#tods-detection-algorithm-deeplog-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-deeplog">
+<h2>tods.detection_algorithm.DeepLog<a class="headerlink" href="#tods-detection-algorithm-deeplog" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tods-detection-algorithm-kdiscordodetect-module">
-<h2>tods.detection_algorithm.KDiscordODetect module<a class="headerlink" href="#tods-detection-algorithm-kdiscordodetect-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-kdiscordodetect">
+<h2>tods.detection_algorithm.KDiscordODetect<a class="headerlink" href="#tods-detection-algorithm-kdiscordodetect" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.KDiscordODetect.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -666,8 +661,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-lstmodetect-module">
-<h2>tods.detection_algorithm.LSTMODetect module<a class="headerlink" href="#tods-detection-algorithm-lstmodetect-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-lstmodetect">
+<h2>tods.detection_algorithm.LSTMODetect<a class="headerlink" href="#tods-detection-algorithm-lstmodetect" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.LSTMODetect.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -849,8 +844,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-matrixprofile-module">
-<h2>tods.detection_algorithm.MatrixProfile module<a class="headerlink" href="#tods-detection-algorithm-matrixprofile-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-matrixprofile">
+<h2>tods.detection_algorithm.MatrixProfile<a class="headerlink" href="#tods-detection-algorithm-matrixprofile" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.MatrixProfile.</code><code class="sig-name descname">MatrixProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -959,8 +954,8 @@ the right matrix profile indices.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pcaodetect-module">
-<h2>tods.detection_algorithm.PCAODetect module<a class="headerlink" href="#tods-detection-algorithm-pcaodetect-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pcaodetect">
+<h2>tods.detection_algorithm.PCAODetect<a class="headerlink" href="#tods-detection-algorithm-pcaodetect" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PCAODetect.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -1228,8 +1223,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodabod-module">
-<h2>tods.detection_algorithm.PyodABOD module<a class="headerlink" href="#tods-detection-algorithm-pyodabod-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodabod">
+<h2>tods.detection_algorithm.PyodABOD<a class="headerlink" href="#tods-detection-algorithm-pyodabod" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodABOD.</code><code class="sig-name descname">ABODPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1452,8 +1447,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodae-module">
-<h2>tods.detection_algorithm.PyodAE module<a class="headerlink" href="#tods-detection-algorithm-pyodae-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodae">
+<h2>tods.detection_algorithm.PyodAE<a class="headerlink" href="#tods-detection-algorithm-pyodae" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodAE.</code><code class="sig-name descname">AutoEncoder</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1722,8 +1717,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodcblof-module">
-<h2>tods.detection_algorithm.PyodCBLOF module<a class="headerlink" href="#tods-detection-algorithm-pyodcblof-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodcblof">
+<h2>tods.detection_algorithm.PyodCBLOF<a class="headerlink" href="#tods-detection-algorithm-pyodcblof" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodCBLOF.</code><code class="sig-name descname">CBLOFPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -1958,8 +1953,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodcof-module">
-<h2>tods.detection_algorithm.PyodCOF module<a class="headerlink" href="#tods-detection-algorithm-pyodcof-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodcof">
+<h2>tods.detection_algorithm.PyodCOF<a class="headerlink" href="#tods-detection-algorithm-pyodcof" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodCOF.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -2171,8 +2166,8 @@ all samples will be used.</p></li>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodhbos-module">
-<h2>tods.detection_algorithm.PyodHBOS module<a class="headerlink" href="#tods-detection-algorithm-pyodhbos-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodhbos">
+<h2>tods.detection_algorithm.PyodHBOS<a class="headerlink" href="#tods-detection-algorithm-pyodhbos" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodHBOS.</code><code class="sig-name descname">HBOSPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -2407,8 +2402,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodisolationforest-module">
-<h2>tods.detection_algorithm.PyodIsolationForest module<a class="headerlink" href="#tods-detection-algorithm-pyodisolationforest-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodisolationforest">
+<h2>tods.detection_algorithm.PyodIsolationForest<a class="headerlink" href="#tods-detection-algorithm-pyodisolationforest" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodIsolationForest.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -2648,8 +2643,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodknn-module">
-<h2>tods.detection_algorithm.PyodKNN module<a class="headerlink" href="#tods-detection-algorithm-pyodknn-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodknn">
+<h2>tods.detection_algorithm.PyodKNN<a class="headerlink" href="#tods-detection-algorithm-pyodknn" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodKNN.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -2913,8 +2908,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodloda-module">
-<h2>tods.detection_algorithm.PyodLODA module<a class="headerlink" href="#tods-detection-algorithm-pyodloda-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodloda">
+<h2>tods.detection_algorithm.PyodLODA<a class="headerlink" href="#tods-detection-algorithm-pyodloda" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodLODA.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -3110,8 +3105,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodlof-module">
-<h2>tods.detection_algorithm.PyodLOF module<a class="headerlink" href="#tods-detection-algorithm-pyodlof-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodlof">
+<h2>tods.detection_algorithm.PyodLOF<a class="headerlink" href="#tods-detection-algorithm-pyodlof" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodLOF.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -3368,8 +3363,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodmogaal-module">
-<h2>tods.detection_algorithm.PyodMoGaal module<a class="headerlink" href="#tods-detection-algorithm-pyodmogaal-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodmogaal">
+<h2>tods.detection_algorithm.PyodMoGaal<a class="headerlink" href="#tods-detection-algorithm-pyodmogaal" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodMoGaal.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -3575,8 +3570,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodocsvm-module">
-<h2>tods.detection_algorithm.PyodOCSVM module<a class="headerlink" href="#tods-detection-algorithm-pyodocsvm-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodocsvm">
+<h2>tods.detection_algorithm.PyodOCSVM<a class="headerlink" href="#tods-detection-algorithm-pyodocsvm" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodOCSVM.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -3792,8 +3787,8 @@ for params available in the class.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodsod-module">
-<h2>tods.detection_algorithm.PyodSOD module<a class="headerlink" href="#tods-detection-algorithm-pyodsod-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodsod">
+<h2>tods.detection_algorithm.PyodSOD<a class="headerlink" href="#tods-detection-algorithm-pyodsod" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodSOD.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -3996,8 +3991,8 @@ define the threshold on the decision function.</p></li>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodsogaal-module">
-<h2>tods.detection_algorithm.PyodSoGaal module<a class="headerlink" href="#tods-detection-algorithm-pyodsogaal-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodsogaal">
+<h2>tods.detection_algorithm.PyodSoGaal<a class="headerlink" href="#tods-detection-algorithm-pyodsogaal" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodSoGaal.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -4202,8 +4197,8 @@ define the threshold on the decision function.</p></li>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-pyodvae-module">
-<h2>tods.detection_algorithm.PyodVAE module<a class="headerlink" href="#tods-detection-algorithm-pyodvae-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-pyodvae">
+<h2>tods.detection_algorithm.PyodVAE<a class="headerlink" href="#tods-detection-algorithm-pyodvae" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.PyodVAE.</code><code class="sig-name descname">Hyperparams</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span></dt>
@@ -4472,11 +4467,11 @@ to define the threshold on the decision function.</p></li>
 </dd></dl>
 
 </div>
-<div class="section" id="tods-detection-algorithm-telemanom-module">
-<h2>tods.detection_algorithm.Telemanom module<a class="headerlink" href="#tods-detection-algorithm-telemanom-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-telemanom">
+<h2>tods.detection_algorithm.Telemanom<a class="headerlink" href="#tods-detection-algorithm-telemanom" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tods-detection-algorithm-uodbaseprimitive-module">
-<h2>tods.detection_algorithm.UODBasePrimitive module<a class="headerlink" href="#tods-detection-algorithm-uodbaseprimitive-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tods-detection-algorithm-uodbaseprimitive">
+<h2>tods.detection_algorithm.UODBasePrimitive<a class="headerlink" href="#tods-detection-algorithm-uodbaseprimitive" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.detection_algorithm.UODBasePrimitive.</code><code class="sig-name descname">UnsupervisedOutlierDetectorBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
@@ -4668,9 +4663,6 @@ to define the threshold on the decision function.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

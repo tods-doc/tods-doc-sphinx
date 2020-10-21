@@ -1,10 +1,7 @@
-tods.detection\_algorithm package
+tods.detection\_algorithm Module
 =================================
 
-Submodules
-----------
-
-tods.detection\_algorithm.AutoRegODetect module
+tods.detection\_algorithm.AutoRegODetect
 -----------------------------------------------
 
 .. automodule:: tods.detection_algorithm.AutoRegODetect
@@ -12,7 +9,7 @@ tods.detection\_algorithm.AutoRegODetect module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.DeepLog module
+tods.detection\_algorithm.DeepLog
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.DeepLog
@@ -20,7 +17,7 @@ tods.detection\_algorithm.DeepLog module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.KDiscordODetect module
+tods.detection\_algorithm.KDiscordODetect
 ------------------------------------------------
 
 .. automodule:: tods.detection_algorithm.KDiscordODetect
@@ -28,7 +25,7 @@ tods.detection\_algorithm.KDiscordODetect module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.LSTMODetect module
+tods.detection\_algorithm.LSTMODetect
 --------------------------------------------
 
 .. automodule:: tods.detection_algorithm.LSTMODetect
@@ -36,7 +33,7 @@ tods.detection\_algorithm.LSTMODetect module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.MatrixProfile module
+tods.detection\_algorithm.MatrixProfile
 ----------------------------------------------
 
 .. automodule:: tods.detection_algorithm.MatrixProfile
@@ -44,7 +41,7 @@ tods.detection\_algorithm.MatrixProfile module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PCAODetect module
+tods.detection\_algorithm.PCAODetect
 -------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PCAODetect
@@ -52,7 +49,7 @@ tods.detection\_algorithm.PCAODetect module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodABOD module
+tods.detection\_algorithm.PyodABOD
 -----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodABOD
@@ -60,7 +57,7 @@ tods.detection\_algorithm.PyodABOD module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodAE module
+tods.detection\_algorithm.PyodAE
 ---------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodAE
@@ -68,7 +65,7 @@ tods.detection\_algorithm.PyodAE module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodCBLOF module
+tods.detection\_algorithm.PyodCBLOF
 ------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodCBLOF
@@ -76,7 +73,7 @@ tods.detection\_algorithm.PyodCBLOF module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodCOF module
+tods.detection\_algorithm.PyodCOF
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodCOF
@@ -84,7 +81,7 @@ tods.detection\_algorithm.PyodCOF module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodHBOS module
+tods.detection\_algorithm.PyodHBOS
 -----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodHBOS
@@ -92,7 +89,7 @@ tods.detection\_algorithm.PyodHBOS module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodIsolationForest module
+tods.detection\_algorithm.PyodIsolationForest
 ----------------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodIsolationForest
@@ -100,7 +97,7 @@ tods.detection\_algorithm.PyodIsolationForest module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodKNN module
+tods.detection\_algorithm.PyodKNN
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodKNN
@@ -108,7 +105,7 @@ tods.detection\_algorithm.PyodKNN module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodLODA module
+tods.detection\_algorithm.PyodLODA
 -----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodLODA
@@ -116,7 +113,7 @@ tods.detection\_algorithm.PyodLODA module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodLOF module
+tods.detection\_algorithm.PyodLOF
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodLOF
@@ -124,7 +121,7 @@ tods.detection\_algorithm.PyodLOF module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodMoGaal module
+tods.detection\_algorithm.PyodMoGaal
 -------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodMoGaal
@@ -132,7 +129,7 @@ tods.detection\_algorithm.PyodMoGaal module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodOCSVM module
+tods.detection\_algorithm.PyodOCSVM
 ------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodOCSVM
@@ -140,7 +137,7 @@ tods.detection\_algorithm.PyodOCSVM module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodSOD module
+tods.detection\_algorithm.PyodSOD
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodSOD
@@ -148,7 +145,7 @@ tods.detection\_algorithm.PyodSOD module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodSoGaal module
+tods.detection\_algorithm.PyodSoGaal
 -------------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodSoGaal
@@ -156,7 +153,7 @@ tods.detection\_algorithm.PyodSoGaal module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.PyodVAE module
+tods.detection\_algorithm.PyodVAE
 ----------------------------------------
 
 .. automodule:: tods.detection_algorithm.PyodVAE
@@ -164,7 +161,7 @@ tods.detection\_algorithm.PyodVAE module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.Telemanom module
+tods.detection\_algorithm.Telemanom
 ------------------------------------------
 
 .. automodule:: tods.detection_algorithm.Telemanom
@@ -172,7 +169,7 @@ tods.detection\_algorithm.Telemanom module
    :noindex:
    :show-inheritance:
 
-tods.detection\_algorithm.UODBasePrimitive module
+tods.detection\_algorithm.UODBasePrimitive
 -------------------------------------------------
 
 .. automodule:: tods.detection_algorithm.UODBasePrimitive
@@ -180,10 +177,3 @@ tods.detection\_algorithm.UODBasePrimitive module
    :noindex:
    :show-inheritance:
 
-Module contents
----------------
-
-.. automodule:: tods.detection_algorithm
-   :members:
-   :noindex:
-   :show-inheritance:

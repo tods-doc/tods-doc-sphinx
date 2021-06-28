@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to TOD's documentation!
+Welcome to TODS's documentation!
 ================================================================
 .. image:: img/tods_logo.png
    :width: 400
@@ -12,7 +12,7 @@ TODS is a full-stack automated machine learning system for outlier detection on 
 
 TODS is featured for:
 
-* **Full Sack Machine Learning System** which supports exhaustive components from preprocessings, feature extraction, detection algorithms and also human-in-the loop interface. 
+* **Full Stack Machine Learning System** which supports exhaustive components from preprocessings, feature extraction, detection algorithms and also human-in-the loop interface. 
 
 * **Wide-range of Algorithms**, including all of the point-wise detection algorithms supported by `PyOD <https://github.com/yzhao062/pyod>`__, state-of-the-art pattern-wise (collective) detection algorithms such as `DeepLog <https://www.cs.utah.edu/~lifeifei/papers/deeplog.pdf>`__, `Telemanon <https://arxiv.org/pdf/1802.04431.pdf>`__, and also various ensemble algorithms for performing system-wise detection.
 
@@ -21,6 +21,7 @@ TODS is featured for:
 Installation
 -----------
 This package works with **Python 3.6** and pip 19+. You need to have the following packages installed on the system (for Debian/Ubuntu):
+(if you are in China and Github is slow, you can use the mirror in `Gitee <https://gitee.com/daochenzha/tods>`__):
 ::
     sudo apt-get install libssl-dev libcurl4-openssl-dev libyaml-dev build-essential libopenblas-dev libcap-dev ffmpeg
 

@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>tods.feature_analysis module &mdash; TODS 0.0.1 documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -166,6 +169,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -177,7 +182,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -195,10 +200,32 @@
 <h2>tods.feature_analysis.AutoCorrelation<a class="headerlink" href="#tods-feature-analysis-autocorrelation" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.AutoCorrelation.</code><code class="sig-name descname">AutoCorrelation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.AutoCorrelation.</code><code class="sig-name descname">AutoCorrelationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>A primitive that performs autocorrelation on a DataFrame
 acf() function documentation: <a class="reference external" href="https://www.statsmodels.org/dev/generated/statsmodels.tsa.stattools.acf.html">https://www.statsmodels.org/dev/generated/statsmodels.tsa.stattools.acf.html</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>-------</strong> – </p></li>
+<li><p><strong>x</strong> – array_like
+The time series data.</p></li>
+<li><p><strong>unbiased</strong> – bool, default False
+If True, then denominators for autocovariance are n-k, otherwise n.</p></li>
+<li><p><strong>nlags</strong> – int, default 40
+Number of lags to return autocorrelation for.</p></li>
+<li><p><strong>qstat</strong> – bool, default False
+If True, returns the Ljung-Box q statistic for each autocorrelation coefficient. See q_stat for more information.</p></li>
+<li><p><strong>fft</strong> – bool, default None
+If True, computes the ACF via FFT.</p></li>
+<li><p><strong>alpha</strong> – scalar, default None
+If a number is given, the confidence intervals for the given level are returned. For instance if alpha=.05, 95 % confidence intervals are returned where the standard deviation is computed according to Bartlett”s formula.</p></li>
+<li><p><strong>missing</strong> – str, default “none”
+A string in [“none”, “raise”, “conservative”, “drop”] specifying how the NaNs are to be treated. “none” performs no checks. “raise” raises an exception if NaN values are found. “drop” removes the missing observations and then estimates the autocovariances treating the non-missing as contiguous. “conservative” computes the autocovariance using nan-ops so that nans are removed when computing the mean and cross-products that are used to estimate the autocovariance. When using “conservative”, n is set to the number of non-missing observations.</p></li>
+<li><p><strong>-------</strong> – </p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py attribute">
 <dt>
 <code class="sig-name descname">metadata</code></dt>
@@ -246,32 +273,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing moving average of selected columns</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -279,8 +280,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <h2>tods.feature_analysis.BKFilter<a class="headerlink" href="#tods-feature-analysis-bkfilter" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.BKFilter.</code><code class="sig-name descname">BKFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.BKFilter.</code><code class="sig-name descname">BKFilterPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Filter a time series using the Baxter-King bandpass filter.</p>
 <dl class="py attribute">
 <dt>
@@ -332,44 +333,19 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>low</strong> (<em>int</em>) – Minimum period for oscillations, ie., Baxter and King suggest that the Burns-Mitchell U.S. business cycle has 6 for quarterly data and 1.5 for annual data.</p></li>
-<li><p><strong>high</strong> (<em>int</em>) – Maximum period for oscillations BK suggest that the U.S. business cycle has 32 for quarterly data and 8 for annual data.</p></li>
-<li><p><strong>K</strong> (<em>int</em>) – Lead-lag length of the filter. Baxter and King propose a truncation length of 12 for quarterly data and 3 for annual data.</p></li>
-<li><p><strong>use_columns</strong> (<em>Set</em>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
-<li><p><strong>exclude_columns</strong> (<em>Set</em>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
-<li><p><strong>return_result</strong> (<em>Enumeration</em>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
-<li><p><strong>use_semantic_types</strong> (<em>Bool</em>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
-<li><p><strong>add_index_columns</strong> (<em>Bool</em>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
-<li><p><strong>error_on_no_input</strong> (<em>Bool</em><em>(</em>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
-<li><p><strong>return_semantic_type</strong> (<em>Enumeration</em><em>[</em><em>str</em><em>]</em><em>(</em>) – Decides what semantic type to attach to generated attributes’</p></li>
+<li><p><strong>low</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Minimum period for oscillations, ie., Baxter and King suggest that the Burns-Mitchell U.S. business cycle has 6 for quarterly data and 1.5 for annual data.</p></li>
+<li><p><strong>high</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum period for oscillations BK suggest that the U.S. business cycle has 32 for quarterly data and 8 for annual data.</p></li>
+<li><p><strong>K</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Lead-lag length of the filter. Baxter and King propose a truncation length of 12 for quarterly data and 3 for annual data.</p></li>
+<li><p><strong>use_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
+<li><p><strong>exclude_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
+<li><p><strong>return_result</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration</span></code>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
+<li><p><strong>use_semantic_types</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
+<li><p><strong>add_index_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
+<li><p><strong>error_on_no_input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool(</span></code>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
+<li><p><strong>return_semantic_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration[str](</span></code>) – Decides what semantic type to attach to generated attributes’</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><p>Process the testing data.
-:param inputs: Container DataFrame.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Container DataFrame after BKFilter.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -377,8 +353,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <h2>tods.feature_analysis.DiscreteCosineTransform<a class="headerlink" href="#tods-feature-analysis-discretecosinetransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.DiscreteCosineTransform.</code><code class="sig-name descname">DiscreteCosineTransform</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.DiscreteCosineTransform.</code><code class="sig-name descname">DiscreteCosineTransformPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Compute the 1-D discrete Cosine Transform.
 Return the Discrete Cosine Transform of arbitrary type sequence x.</p>
 <p>scipy documentation: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html#scipy.fft.dct">https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.dct.html#scipy.fft.dct</a></p>
@@ -432,12 +408,12 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<em>int</em>) – Type of the DCT. Default is 2</p></li>
-<li><p><strong>n</strong> (<em>int</em>) – Length of the transformed axis of the output. If n is smaller than the length of the input, the input is cropped. If it is larger, the input is padded with zeros.</p></li>
-<li><p><strong>axis</strong> (<em>int</em>) – Axis over which to compute the DCT. If not given, the last axis is used.</p></li>
-<li><p><strong>norm</strong> (<em>str</em>) – Normalization mode. Default is None, meaning no normalization on the forward transforms and scaling by 1/n on the ifft. For norm=””ortho””, both directions are scaled by 1/sqrt(n).</p></li>
-<li><p><strong>overwrite_x</strong> (<em>boolean</em>) – If True, the contents of x can be destroyed; the default is False. See the notes below for more details.</p></li>
-<li><p><strong>workers</strong> (<em>int</em>) – Maximum number of workers to use for parallel computation. If negative, the value wraps around from os.cpu_count(). Defualt is None.</p></li>
+<li><p><strong>type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Type of the DCT. Default is 2</p></li>
+<li><p><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Length of the transformed axis of the output. If n is smaller than the length of the input, the input is cropped. If it is larger, the input is padded with zeros.</p></li>
+<li><p><strong>axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Axis over which to compute the DCT. If not given, the last axis is used.</p></li>
+<li><p><strong>norm</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Normalization mode. Default is None, meaning no normalization on the forward transforms and scaling by 1/n on the ifft. For norm=””ortho””, both directions are scaled by 1/sqrt(n).</p></li>
+<li><p><strong>overwrite_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code>) – If True, the contents of x can be destroyed; the default is False. See the notes below for more details.</p></li>
+<li><p><strong>workers</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of workers to use for parallel computation. If negative, the value wraps around from os.cpu_count(). Defualt is None.</p></li>
 </ul>
 </dd>
 </dl>
@@ -457,30 +433,6 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dt>return_semantic_type: Enumeration[str](</dt><dd><p>Decides what semantic type to attach to generated attributes’</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame added with DCT coefficients in a column named ‘column_name_dct_coeff’</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -488,8 +440,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <h2>tods.feature_analysis.FastFourierTransform<a class="headerlink" href="#tods-feature-analysis-fastfouriertransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.FastFourierTransform.</code><code class="sig-name descname">FastFourierTransform</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.FastFourierTransform.</code><code class="sig-name descname">FastFourierTransformPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Compute the 1-D discrete Fourier Transform.
 This function computes the 1-D n-point discrete Fourier Transform (DFT) with the efficient Fast Fourier Transform (FFT) algorithm</p>
 <p>scipy documentation : <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.fft.html#scipy.fft.fft">https://docs.scipy.org/doc/scipy/reference/generated/scipy.fft.fft.html#scipy.fft.fft</a></p>
@@ -543,11 +495,11 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n</strong> (<em>int</em>) – Length of the transformed axis of the output. If n is smaller than the length of the input, the input is cropped. If it is larger, the input is padded with zeros.</p></li>
-<li><p><strong>axis</strong> (<em>int</em>) – Axis over which to compute the FFT. If not given, the last axis is used.</p></li>
-<li><p><strong>norm</strong> (<em>str</em>) – Normalization mode. Default is None, meaning no normalization on the forward transforms and scaling by 1/n on the ifft. For norm=””ortho””, both directions are scaled by 1/sqrt(n).</p></li>
-<li><p><strong>overwrite_x</strong> (<em>boolean</em>) – If True, the contents of x can be destroyed; the default is False. See the notes below for more details.</p></li>
-<li><p><strong>workers</strong> (<em>int</em>) – Maximum number of workers to use for parallel computation. If negative, the value wraps around from os.cpu_count(). Defualt is None.</p></li>
+<li><p><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Length of the transformed axis of the output. If n is smaller than the length of the input, the input is cropped. If it is larger, the input is padded with zeros.</p></li>
+<li><p><strong>axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Axis over which to compute the FFT. If not given, the last axis is used.</p></li>
+<li><p><strong>norm</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Normalization mode. Default is None, meaning no normalization on the forward transforms and scaling by 1/n on the ifft. For norm=””ortho””, both directions are scaled by 1/sqrt(n).</p></li>
+<li><p><strong>overwrite_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code>) – If True, the contents of x can be destroyed; the default is False. See the notes below for more details.</p></li>
+<li><p><strong>workers</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of workers to use for parallel computation. If negative, the value wraps around from os.cpu_count(). Defualt is None.</p></li>
 </ul>
 </dd>
 </dl>
@@ -567,31 +519,6 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dt>return_semantic_type: Enumeration[str](</dt><dd><p>Decides what semantic type to attach to generated attributes’</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame added with absolute and phase value in a columns named ‘column_name_fft_abs’ and ‘column_name_fft_phse’.
-These values correspnd to the absolute and angle values for a complex number we get as FFT coefficients</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -599,8 +526,8 @@ These values correspnd to the absolute and angle values for a complex number we 
 <h2>tods.feature_analysis.HPFilter<a class="headerlink" href="#tods-feature-analysis-hpfilter" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.HPFilter.</code><code class="sig-name descname">HPFilter</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.HPFilter.</code><code class="sig-name descname">HPFilterPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Filter a time series using the Hodrick-Prescott filter.</p>
 <dl class="py attribute">
 <dt>
@@ -652,42 +579,17 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lamb</strong> (<em>int</em>) – The Hodrick-Prescott smoothing parameter. A value of 1600 is suggested for quarterly data. Ravn and Uhlig suggest using a value of 6.25 (1600/4**4) for annual data and 129600 (1600*3**4) for monthly data.</p></li>
-<li><p><strong>use_columns</strong> (<em>Set</em>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
-<li><p><strong>exclude_columns</strong> (<em>Set</em>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
-<li><p><strong>return_result</strong> (<em>Enumeration</em>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
-<li><p><strong>use_semantic_types</strong> (<em>Bool</em>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
-<li><p><strong>add_index_columns</strong> (<em>Bool</em>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
-<li><p><strong>error_on_no_input</strong> (<em>Bool</em><em>(</em>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
-<li><p><strong>return_semantic_type</strong> (<em>Enumeration</em><em>[</em><em>str</em><em>]</em><em>(</em>) – Decides what semantic type to attach to generated attributes’</p></li>
+<li><p><strong>lamb</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The Hodrick-Prescott smoothing parameter. A value of 1600 is suggested for quarterly data. Ravn and Uhlig suggest using a value of 6.25 (1600/4**4) for annual data and 129600 (1600*3**4) for monthly data.</p></li>
+<li><p><strong>use_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
+<li><p><strong>exclude_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
+<li><p><strong>return_result</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration</span></code>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
+<li><p><strong>use_semantic_types</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
+<li><p><strong>add_index_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
+<li><p><strong>error_on_no_input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool(</span></code>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
+<li><p><strong>return_semantic_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration[str](</span></code>) – Decides what semantic type to attach to generated attributes’</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><p>Process the testing data.
-:param inputs: Container DataFrame.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Container DataFrame after HPFilter.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -695,8 +597,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <h2>tods.feature_analysis.NonNegativeMatrixFactorization<a class="headerlink" href="#tods-feature-analysis-nonnegativematrixfactorization" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.NonNegativeMatrixFactorization.</code><code class="sig-name descname">NonNegativeMatrixFactorization</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.NonNegativeMatrixFactorization.</code><code class="sig-name descname">NonNegativeMatrixFactorizationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Calculates Latent factors of a given matrix of timeseries data</p>
 <dl class="py attribute">
 <dt>
@@ -748,15 +650,15 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>rank</strong> (<em>int</em>) – The factorization rank to achieve. Default is 30.</p></li>
-<li><p><strong>update</strong> (<em>str</em>) – <dl>
+<li><p><strong>rank</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The factorization rank to achieve. Default is 30.</p></li>
+<li><p><strong>update</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <dl>
 <dt>Type of update equations used in factorization. When specifying model parameter update can be assigned to:”</dt><dd><p>’euclidean’ for classic Euclidean distance update equations,”
 ‘divergence’ for divergence update equations.”</p>
 <p>By default Euclidean update equations are used.</p>
 </dd>
 </dl>
 </p></li>
-<li><p><strong>objective</strong> (<em>str</em>) – <p>Type of objective function used in factorization. When specifying model parameter <a href="#id1"><span class="problematic" id="id2">:param:`objective`</span></a> can be assigned to:</p>
+<li><p><strong>objective</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – <p>Type of objective function used in factorization. When specifying model parameter <a href="#id1"><span class="problematic" id="id2">:param:`objective`</span></a> can be assigned to:</p>
 <blockquote>
 <div><p>‘fro’ for standard Frobenius distance cost function,
 ‘div’ for divergence of target matrix from NMF estimate cost function (KL),
@@ -764,8 +666,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <p>By default the standard Frobenius distance cost function is used.</p>
 </div></blockquote>
 </p></li>
-<li><p><strong>max_iter</strong> (<em>int</em>) – Maximum number of factorization iterations. Note that the number of iterations depends on the speed of method convergence. Default is 30.</p></li>
-<li><p><strong>learning_rate</strong> (<em>float</em>) – Minimal required improvement of the residuals from the previous iteration. They are computed between the target matrix and its MF estimate using the objective function associated to the MF algorithm. Default is None.</p></li>
+<li><p><strong>max_iter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum number of factorization iterations. Note that the number of iterations depends on the speed of method convergence. Default is 30.</p></li>
+<li><p><strong>learning_rate</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Minimal required improvement of the residuals from the previous iteration. They are computed between the target matrix and its MF estimate using the objective function associated to the MF algorithm. Default is None.</p></li>
 </ul>
 </dd>
 </dl>
@@ -785,56 +687,6 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dt>return_semantic_type: Enumeration[str](</dt><dd><p>Decides what semantic type to attach to generated attributes’</p>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><p>Produce primitive’s best choice of the output for each of the inputs.</p>
-<p>The output value should be wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code> object before returning.</p>
-<p>In many cases producing an output is a quick operation in comparison with <code class="docutils literal notranslate"><span class="pre">fit</span></code>, but not
-all cases are like that. For example, a primitive can start a potentially long optimization
-process to compute outputs. <code class="docutils literal notranslate"><span class="pre">timeout</span></code> and <code class="docutils literal notranslate"><span class="pre">iterations</span></code> can serve as a way for a caller
-to guide the length of this process.</p>
-<p>Ideally, a primitive should adapt its call to try to produce the best outputs possible
-inside the time allocated. If this is not possible and the primitive reaches the timeout
-before producing outputs, it should raise a <code class="docutils literal notranslate"><span class="pre">TimeoutError</span></code> exception to signal that the
-call was unsuccessful in the given time. The state of the primitive after the exception
-should be as the method call has never happened and primitive should continue to operate
-normally. The purpose of <code class="docutils literal notranslate"><span class="pre">timeout</span></code> is to give opportunity to a primitive to cleanly
-manage its state instead of interrupting execution from outside. Maintaining stable internal
-state should have precedence over respecting the <code class="docutils literal notranslate"><span class="pre">timeout</span></code> (caller can terminate the
-misbehaving primitive from outside anyway). If a longer <code class="docutils literal notranslate"><span class="pre">timeout</span></code> would produce
-different outputs, then <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>’s <code class="docutils literal notranslate"><span class="pre">has_finished</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>Some primitives have internal iterations (for example, optimization iterations).
-For those, caller can provide how many of primitive’s internal iterations
-should a primitive do before returning outputs. Primitives should make iterations as
-small as reasonable. If <code class="docutils literal notranslate"><span class="pre">iterations</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, then there is no limit on
-how many iterations the primitive should do and primitive should choose the best amount
-of iterations on its own (potentially controlled through hyper-parameters).
-If <code class="docutils literal notranslate"><span class="pre">iterations</span></code> is a number, a primitive has to do those number of iterations,
-if possible. <code class="docutils literal notranslate"><span class="pre">timeout</span></code> should still be respected and potentially less iterations
-can be done because of that. Primitives with internal iterations should make
-<code class="docutils literal notranslate"><span class="pre">CallResult</span></code> contain correct values.</p>
-<p>For primitives which do not have internal iterations, any value of <code class="docutils literal notranslate"><span class="pre">iterations</span></code>
-means that they should run fully, respecting only <code class="docutils literal notranslate"><span class="pre">timeout</span></code>.</p>
-<p>If primitive should have been fitted before calling this method, but it has not been,
-primitive should raise a <code class="docutils literal notranslate"><span class="pre">PrimitiveNotFittedError</span></code> exception.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -842,7 +694,7 @@ primitive should raise a <code class="docutils literal notranslate"><span class=
 <h2>tods.feature_analysis.SKTruncatedSVD<a class="headerlink" href="#tods-feature-analysis-sktruncatedsvd" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.SKTruncatedSVD.</code><code class="sig-name descname">SKTruncatedSVD</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.SKTruncatedSVD.</code><code class="sig-name descname">SKTruncatedSVDPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.unsupervised_learning.UnsupervisedLearnerPrimitiveBase</span></code></p>
 <p>Primitive wrapping for sklearn TruncatedSVD
 <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.TruncatedSVD.html">sklearn documentation</a></p>
@@ -896,15 +748,15 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n_components</strong> (<em>int</em>) – Desired dimensionality of output data. Must be strictly less than the number of features. The default value is useful for visualisation. For LSA, a value of 100 is recommended.</p></li>
-<li><p><strong>algorithm</strong> (<em>hyperparams.Choice</em>) – SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sparse.linalg.svds), or “randomized” for the randomized algorithm due to Halko (2009).</p></li>
-<li><p><strong>use_columns</strong> (<em>Set</em>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
-<li><p><strong>exclude_columns</strong> (<em>Set</em>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
-<li><p><strong>return_result</strong> (<em>Enumeration</em>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
-<li><p><strong>use_semantic_types</strong> (<em>Bool</em>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
-<li><p><strong>add_index_columns</strong> (<em>Bool</em>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
-<li><p><strong>error_on_no_input</strong> (<em>Bool</em><em>(</em>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
-<li><p><strong>return_semantic_type</strong> (<em>Enumeration</em><em>[</em><em>str</em><em>]</em><em>(</em>) – Decides what semantic type to attach to generated attributes’</p></li>
+<li><p><strong>n_components</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Desired dimensionality of output data. Must be strictly less than the number of features. The default value is useful for visualisation. For LSA, a value of 100 is recommended.</p></li>
+<li><p><strong>algorithm</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">hyperparams.Choice</span></code>) – SVD solver to use. Either “arpack” for the ARPACK wrapper in SciPy (scipy.sparse.linalg.svds), or “randomized” for the randomized algorithm due to Halko (2009).</p></li>
+<li><p><strong>use_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to force primitive to operate on. If any specified column cannot be parsed, it is skipped.</p></li>
+<li><p><strong>exclude_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Set</span></code>) – A set of column indices to not operate on. Applicable only if “use_columns” is not provided.</p></li>
+<li><p><strong>return_result</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration</span></code>) – Should parsed columns be appended, should they replace original columns, or should only parsed columns be returned? This hyperparam is ignored if use_semantic_types is set to false.</p></li>
+<li><p><strong>use_semantic_types</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Controls whether semantic_types metadata will be used for filtering columns in input dataframe. Setting this to false makes the code ignore return_result and will produce only the output dataframe.</p></li>
+<li><p><strong>add_index_columns</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool</span></code>) – Also include primary index columns if input data has them. Applicable only if “return_result” is set to “new”.</p></li>
+<li><p><strong>error_on_no_input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Bool(</span></code>) – Throw an exception if no input column is selected/provided. Defaults to true to behave like sklearn. To prevent pipelines from breaking set this to False.</p></li>
+<li><p><strong>return_semantic_type</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Enumeration[str](</span></code>) – Decides what semantic type to attach to generated attributes’</p></li>
 </ul>
 </dd>
 </dl>
@@ -1013,7 +865,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.SpectralResidualTransform.</code><code class="sig-name descname">SpectralResidualTransformPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find Spectral Residual Transform of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1062,32 +914,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing Spectral Residual Transform of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1096,7 +922,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalAbsEnergy.</code><code class="sig-name descname">StatisticalAbsEnergyPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find abs_energy of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1145,32 +971,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing abs_energy of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1179,7 +979,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalAbsSum.</code><code class="sig-name descname">StatisticalAbsSumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find abs_sum of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1228,32 +1028,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing abs_sum of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1262,7 +1036,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalGmean.</code><code class="sig-name descname">StatisticalGmeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find gmean of time series .
 Will only take positive values as inputs .</p>
 <dl class="py attribute">
@@ -1312,32 +1086,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing gmean of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1346,7 +1094,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalHmean.</code><code class="sig-name descname">StatisticalHmeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <dl class="simple">
 <dt>Primitive to find Harmonic mean of time series</dt><dd><p>Harmonic mean only defined if all elements greater than or equal to zero</p>
 </dd>
@@ -1398,32 +1146,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing hmean of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1432,7 +1154,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalKurtosis.</code><code class="sig-name descname">StatisticalKurtosisPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find kurtosis of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1481,32 +1203,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing kurtosis of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1515,7 +1211,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMaximum.</code><code class="sig-name descname">StatisticalMaximumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find maximum of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1564,32 +1260,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing maximum of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1598,7 +1268,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMean.</code><code class="sig-name descname">StatisticalMeanPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find mean of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1647,32 +1317,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing mean of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1681,7 +1325,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanAbs.</code><code class="sig-name descname">StatisticalMeanAbsPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find mean_abs of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1730,32 +1374,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing mean_abs of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1764,7 +1382,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanAbsTemporalDerivative.</code><code class="sig-name descname">StatisticalMeanAbsTemporalDerivativePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find mean_abs_temporal_derivative of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1813,32 +1431,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing mean_abs_temporal_derivative of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1847,7 +1439,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMeanTemporalDerivative.</code><code class="sig-name descname">StatisticalMeanTemporalDerivativePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find mean_temporal_derivative of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1896,32 +1488,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing mean_temporal_derivative of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -1930,7 +1496,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMedian.</code><code class="sig-name descname">StatisticalMedianPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find median of time series</p>
 <dl class="py attribute">
 <dt>
@@ -1979,32 +1545,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing median of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2013,7 +1553,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMedianAbsoluteDeviation.</code><code class="sig-name descname">StatisticalMedianAbsoluteDeviationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find median_absolute_deviation of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2062,32 +1602,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing median_absolute_deviation of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2096,7 +1610,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalMinimum.</code><code class="sig-name descname">StatisticalMinimumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find minimum of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2145,32 +1659,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing minimum of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2179,7 +1667,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalSkew.</code><code class="sig-name descname">StatisticalSkewPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find skew of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2228,32 +1716,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing skew of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2262,7 +1724,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalStd.</code><code class="sig-name descname">StatisticalStdPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find std of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2311,32 +1773,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing std of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2345,7 +1781,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVar.</code><code class="sig-name descname">StatisticalVarPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find var of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2394,32 +1830,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing var of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2428,7 +1838,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVariation.</code><code class="sig-name descname">StatisticalVariationPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find variation of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2477,32 +1887,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing variation of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2511,7 +1895,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalVecSum.</code><code class="sig-name descname">StatisticalVecSumPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find vec_sum of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2560,32 +1944,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing vec_sum of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2594,7 +1952,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalWillisonAmplitude.</code><code class="sig-name descname">StatisticalWillisonAmplitudePrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find willison amplitude of time series</p>
 <dl class="py attribute">
 <dt>
@@ -2643,32 +2001,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing willison amplitude of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2677,7 +2009,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="py class">
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.StatisticalZeroCrossing.</code><code class="sig-name descname">StatisticalZeroCrossingPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Primitive to find zero_crossing of time series. A column indicating zero crossing on ith row . 1 indicates crossing 0 is for normal</p>
 <dl class="py attribute">
 <dt>
@@ -2726,32 +2058,6 @@ for the duration of the current pipeline run phase. Directory is automatically
 cleaned up after the current pipeline run phase finishes.</p>
 </dd></dl>
 
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – Container DataFrame</p></li>
-<li><p><strong>timeout</strong> – Default</p></li>
-<li><p><strong>iterations</strong> – Default</p></li>
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Container DataFrame containing zero crossing indicator of  time series</p>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2759,8 +2065,8 @@ cleaned up after the current pipeline run phase finishes.</p>
 <h2>tods.feature_analysis.TRMF<a class="headerlink" href="#tods-feature-analysis-trmf" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.TRMF.</code><code class="sig-name descname">TRMF</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.TRMF.</code><code class="sig-name descname">TRMFPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>Temporal Regularized Matrix Factorization.</p>
 <dl class="py attribute">
 <dt>
@@ -2768,7 +2074,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dd><p>Latent embedding of timeseries.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>ndarray, shape (n_timeseries, K)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shape</span> <span class="pre">(n_timeseries</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">K)</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2779,7 +2085,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dd><p>Latent embedding of timepoints.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>ndarray, shape (K, n_timepoints)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shape</span> <span class="pre">(K</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">n_timepoints)</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2790,7 +2096,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dd><p>Matrix of autoregressive coefficients.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>ndarray, shape (K, n_lags)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shape</span> <span class="pre">(K</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">n_lags)</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2810,7 +2116,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <code class="sig-name descname">&quot;https</code></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p>//github.com/SemenovAlex/trmf”</p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">//github.com/SemenovAlex/trmf&quot;</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2830,7 +2136,7 @@ cleaned up after the current pipeline run phase finishes.</p>
 <code class="sig-name descname">Which can be found there</code></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Type</dt>
-<dd class="field-odd"><p><a class="reference external" href="http://www.cs.utexas.edu/~rofuyu/papers/tr-mf-nips.pdf">http://www.cs.utexas.edu/~rofuyu/papers/tr-mf-nips.pdf</a></p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">http://www.cs.utexas.edu/~rofuyu/papers/tr-mf-nips.pdf</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2838,46 +2144,21 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lags</strong> (<em>array-like</em><em>, </em><em>shape</em><em> (</em><em>n_lags</em><em>,</em><em>)</em>) – Set of lag indices to use in model.</p></li>
-<li><p><strong>K</strong> (<em>int</em>) – Length of latent embedding dimension</p></li>
-<li><p><strong>lambda_f</strong> (<em>float</em>) – Regularization parameter used for matrix F.</p></li>
-<li><p><strong>lambda_x</strong> (<em>float</em>) – Regularization parameter used for matrix X.</p></li>
-<li><p><strong>lambda_w</strong> (<em>float</em>) – Regularization parameter used for matrix W.</p></li>
-<li><p><strong>alpha</strong> (<em>float</em>) – Regularization parameter used for make the sum of lag coefficient close to 1.
+<li><p><strong>lags</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">array-like</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">shape</span> <span class="pre">(n_lags,)</span></code>) – Set of lag indices to use in model.</p></li>
+<li><p><strong>K</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Length of latent embedding dimension</p></li>
+<li><p><strong>lambda_f</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Regularization parameter used for matrix F.</p></li>
+<li><p><strong>lambda_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Regularization parameter used for matrix X.</p></li>
+<li><p><strong>lambda_w</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Regularization parameter used for matrix W.</p></li>
+<li><p><strong>alpha</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Regularization parameter used for make the sum of lag coefficient close to 1.
 That helps to avoid big deviations when forecasting.</p></li>
-<li><p><strong>eta</strong> (<em>float</em>) – Regularization parameter used for X when undercovering autoregressive dependencies.</p></li>
-<li><p><strong>max_iter</strong> (<em>int</em>) – Number of iterations of updating matrices F, X and W.</p></li>
-<li><p><strong>F_step</strong> (<em>float</em>) – Step of gradient descent when updating matrix F.</p></li>
-<li><p><strong>X_step</strong> (<em>float</em>) – Step of gradient descent when updating matrix X.</p></li>
-<li><p><strong>W_step</strong> (<em>float</em>) – Step of gradient descent when updating matrix W.</p></li>
+<li><p><strong>eta</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Regularization parameter used for X when undercovering autoregressive dependencies.</p></li>
+<li><p><strong>max_iter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of iterations of updating matrices F, X and W.</p></li>
+<li><p><strong>F_step</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Step of gradient descent when updating matrix F.</p></li>
+<li><p><strong>X_step</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Step of gradient descent when updating matrix X.</p></li>
+<li><p><strong>W_step</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Step of gradient descent when updating matrix W.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><p>Process the testing data.
-:param inputs: Container DataFrame.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Container DataFrame after Truncated SVD.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p></p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2885,8 +2166,8 @@ That helps to avoid big deviations when forecasting.</p></li>
 <h2>tods.feature_analysis.WaveletTransform<a class="headerlink" href="#tods-feature-analysis-wavelettransform" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt>
-<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.WaveletTransform.</code><code class="sig-name descname">WaveletTransformer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">d3m.primitive_interfaces.transformer.TransformerPrimitiveBase</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">tods.feature_analysis.WaveletTransform.</code><code class="sig-name descname">WaveletTransformPrimitive</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwds</span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tods.common.TODSBasePrimitives.TODSTransformerPrimitiveBase</span></code></p>
 <p>A primitive of Multilevel 1D Discrete Wavelet Transform of data.
 See <a class="reference external" href="https://pywavelets.readthedocs.io/en/latest/ref/">PyWavelet documentation</a> for details.</p>
 <dl class="py attribute">
@@ -2939,46 +2220,17 @@ cleaned up after the current pipeline run phase finishes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>wavelet</strong> (<em>str</em>) – Wavelet to use</p></li>
-<li><p><strong>mode</strong> (<em>str</em>) – Signal extension mode, see <a class="reference external" href="https://pywavelets.readthedocs.io/en/latest/ref/signal-extension-modes.html#ref-modes">https://pywavelets.readthedocs.io/en/latest/ref/signal-extension-modes.html#ref-modes</a> for details.</p></li>
-<li><p><strong>axis</strong> (<em>int</em>) – Axis over which to compute the DWT. If not given, transforming along columns.</p></li>
-<li><p><strong>window_size</strong> (<em>int</em>) – The moving window size.</p></li>
-<li><p><strong>level</strong> (<em>int</em>) – Decomposition level (must be &gt; 0). If level is 0 (default) then it will be calculated using the maximum level.</p></li>
+<li><p><strong>wavelet</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Wavelet to use</p></li>
+<li><p><strong>mode</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Signal extension mode, see <a class="reference external" href="https://pywavelets.readthedocs.io/en/latest/ref/signal-extension-modes.html#ref-modes">https://pywavelets.readthedocs.io/en/latest/ref/signal-extension-modes.html#ref-modes</a> for details.</p></li>
+<li><p><strong>axis</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Axis over which to compute the DWT. If not given, transforming along columns.</p></li>
+<li><p><strong>window_size</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The moving window size.</p></li>
+<li><p><strong>level</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Decomposition level (must be &gt; 0). If level is 0 (default) then it will be calculated using the maximum level.</p></li>
 <li><p><strong>Attributes</strong> – </p></li>
 <li><p><strong>----------</strong> – </p></li>
 <li><p><strong>None</strong> – </p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt>
-<code class="sig-name descname">produce</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span></em>, <em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">d3m.container.pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iterations</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; d3m.primitive_interfaces.base.CallResult<span class="p">[</span>d3m.container.pandas.DataFrame<span class="p">]</span></dt>
-<dd><p>Process the testing data.
-:param inputs: Container DataFrame. Time series data up to Wavelet transform.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Container DataFrame after Wavelet Transformation.
-Ordered frame of coefficients arrays where n denotes the level of decomposition. The first element (cA_n) of the result is approximation coefficients array and the following elements (cD_n - cD_1) are details coefficients arrays.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[cA_n, cD_n, cD_n-1, …, cD2, cD1]</p>
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – The inputs of shape [num_inputs, …].</p></li>
-<li><p><strong>timeout</strong> – A maximum time this primitive should take to produce outputs during this method call, in seconds.</p></li>
-<li><p><strong>iterations</strong> – How many of internal iterations should the primitive do.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>The outputs of shape [num_inputs, …] wrapped inside <code class="docutils literal notranslate"><span class="pre">CallResult</span></code>.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2989,37 +2241,29 @@ Ordered frame of coefficients arrays where n denotes the level of decomposition.
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="tods.detection_algorithm.html" class="btn btn-neutral float-right" title="tods.detection_algorithm Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="tods.timeseries_processing.html" class="btn btn-neutral float-left" title="tods.timeseries_processing module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="tods.detection_algorithm.html" class="btn btn-neutral float-right" title="tods.detection_algorithm Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tods.timeseries_processing.html" class="btn btn-neutral float-left" title="tods.timeseries_processing module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, DataLab@Texas A&amp;M University
+        &#169; Copyright 2020, DataLab@Texas A&amp;M University.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

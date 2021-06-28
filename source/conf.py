@@ -20,7 +20,7 @@ sys.path.append(os.path.abspath('../../'))
 def skip_member(app, what, name, obj, skip, opts):
  # we can document otherwise excluded entities here by returning False
  # or skip otherwise included entities by returning True
-    if name == "__author" or name == "metadata":
+    if name == "logger":
         return True
     return None
 

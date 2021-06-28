@@ -5,8 +5,10 @@ tods.data\_processing.CategoricalToBinary
 ------------------------------------------------
 
 .. automodule:: tods.data_processing.CategoricalToBinary
-   :members:
+   :members: 
    :noindex:
+   :undoc-members:
+   :meta private:metadata, logger
 
 tods.data\_processing.ColumnFilter
 -----------------------------------------

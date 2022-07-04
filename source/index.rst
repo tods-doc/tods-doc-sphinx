@@ -19,7 +19,7 @@ TODS is featured for:
 * **Automated Machine Learning** aims on providing knowledge-free process that construct optimal pipeline based on the given data by automatically searching the best combination from all of the existing modules.
 
 Installation
------------
+------------
 This package works with **Python 3.6** and pip 19+. You need to have the following packages installed on the system (for Debian/Ubuntu):
 (if you are in China and Github is slow, you can use the mirror in `Gitee <https://gitee.com/daochenzha/tods>`__):
 ::
@@ -111,6 +111,7 @@ We also provide AutoML support to help you automatically find a good pipeline fo
 
    overview
    getting_started
+   PythonPathCheatSheet
 
 
 .. toctree::

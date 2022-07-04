@@ -13,25 +13,27 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('./_ext'))
-sys.path.append(os.path.abspath('../../tods'))
-sys.path.append(os.path.abspath('../../'))
+sys.path.append(os.path.abspath('/Users/lisongchen/Projects/tods/tods'))
+# sys.path.append(os.path.abspath('../'))
 
 # -- Auto-doc Skip --------------------
 def skip_member(app, what, name, obj, skip, opts):
  # we can document otherwise excluded entities here by returning False
  # or skip otherwise included entities by returning True
-    if name == "logger":
+    if what == "logger":
         return True
     return None
 
 def setup(app):
     app.connect('autodoc-skip-member', skip_member)
 
+# autodoc_inherit_docstrings = False
+
 # -- Project information -----------------------------------------------------
 
 project = 'TODS'
-copyright = '2020, DataLab@Texas A&M University'
-author = 'DataLab@Texas A&M University'
+copyright = '2022, DataLab@Rice University'
+author = 'DataLab@Rice University'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
@@ -43,6 +45,10 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "myst_parser",
+    "sphinx_design",
+    "sphinx_thebe",
+    'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -74,7 +80,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 html_show_sourcelink = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -82,11 +88,11 @@ html_show_sourcelink = False
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_logo = "img/tods_menu_logo.png"
-html_theme_options = {
-    'logo_only': True,
-    'display_version': False,
+# html_theme_options = {
+#     'logo_only': True,
+#     'display_version': False,
 
-}
-html_sidebars = {
-   '**': ['fulltoc.html', 'sourcelink.html', 'searchbox.html', 'srclink.html']
-}
+# }
+# html_sidebars = {
+#    '**': ['fulltoc.html', 'sourcelink.html', 'searchbox.html', 'srclink.html']
+# }

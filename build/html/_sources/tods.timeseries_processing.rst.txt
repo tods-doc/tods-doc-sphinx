@@ -3,70 +3,70 @@ tods.timeseries\_processing
 
 .. _tods.timeseries_processing.HoltSmoothing:
 
-tods.timeseries\_processing.HoltSmoothing
+HoltSmoothing
 ------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.HoltSmoothing.HoltSmoothingPrimitive
 
 .. _tods.timeseries_processing.HoltWintersExponentialSmoothing:
 
-tods.timeseries\_processing.HoltWintersExponentialSmoothing
+HoltWintersExponentialSmoothing
 ------------------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.HoltWintersExponentialSmoothing.HoltWintersExponentialSmoothingPrimitive
 
 .. _tods.timeseries_processing.MovingAverageTransformer:
 
-tods.timeseries\_processing.MovingAverageTransformer
+MovingAverageTransformer
 ---------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.MovingAverageTransformer.MovingAverageTransformerPrimitive
 
 .. _tods.timeseries_processing.SKAxiswiseScaler:
 
-tods.timeseries\_processing.SKAxiswiseScaler
+SKAxiswiseScaler
 ---------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SKAxiswiseScaler.SKAxiswiseScalerPrimitive
 
 .. _tods.timeseries_processing.SKPowerTransformer:
 
-tods.timeseries\_processing.SKPowerTransformer
+SKPowerTransformer
 -----------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SKPowerTransformer.SKPowerTransformerPrimitive
 
 .. _tods.timeseries_processing.SKQuantileTransformer:
 
-tods.timeseries\_processing.SKQuantileTransformer
+SKQuantileTransformer
 --------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SKQuantileTransformer.SKQuantileTransformerPrimitive
 
 .. _tods.timeseries_processing.SKStandardScaler:
 
-tods.timeseries\_processing.SKStandardScaler
+SKStandardScaler
 ---------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SKStandardScaler.SKStandardScalerPrimitive
 
 .. _tods.timeseries_processing.SimpleExponentialSmoothing:
 
-tods.timeseries\_processing.SimpleExponentialSmoothing
+SimpleExponentialSmoothing
 -------------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SimpleExponentialSmoothing.SimpleExponentialSmoothingPrimitive
 
 .. _tods.timeseries_processing.SubsequenceSegmentation:
 
-tods.timeseries\_processing.SubsequenceSegmentation
+SubsequenceSegmentation
 -------------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.SubsequenceSegmentation.SubsequenceSegmentationPrimitive
 
 .. _tods.timeseries_processing.TimeSeriesSeasonalityTrendDecomposition:
 
-tods.timeseries\_processing.TimeSeriesSeasonalityTrendDecomposition
+TimeSeriesSeasonalityTrendDecomposition
 --------------------------------------------------------------------------
 
 .. autoclass:: tods.timeseries_processing.TimeSeriesSeasonalityTrendDecomposition.TimeSeriesSeasonalityTrendDecompositionPrimitive

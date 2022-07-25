@@ -14,6 +14,9 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('./_ext'))
 sys.path.append(os.path.abspath('/Users/lisongchen/Projects/tods/tods'))
+sys.path.insert(0, os.path.abspath('../sphinxext'))
+from github_link import make_linkcode_resolve
+
 # sys.path.append(os.path.abspath('../'))
 
 # -- Auto-doc Skip --------------------
@@ -48,7 +51,7 @@ extensions = [
     "myst_parser",
     "sphinx_design",
     "sphinx_thebe",
-    'sphinx.ext.viewcode',
+    #'sphinx.ext.viewcode',
     'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
@@ -57,7 +60,14 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
+    'sphinx.ext.linkcode',
+    'sphinxcontrib.bibtex'
 ]
+
+# Add bib file
+suppress_warnings = ["bibtex"]
+bibtex_bibfiles = ['refs.bib']
+
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -96,3 +106,8 @@ html_logo = "img/tods_menu_logo.png"
 # html_sidebars = {
 #    '**': ['fulltoc.html', 'sourcelink.html', 'searchbox.html', 'srclink.html']
 # }
+linkcode_resolve = make_linkcode_resolve('tods',
+                                         'https://github.com/datamllab/'
+                                         'tods/blob/master/'
+                                         '{package}/{path}#L{lineno}')
+# https://github.com/datamllab/tods/tree/master/todstods/data_processing/CategoricalToBinary.py#L119

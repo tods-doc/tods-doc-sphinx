@@ -5,77 +5,77 @@ tods.data\_processing
 
 .. _tods.data_processing.CategoricalToBinary:
 
-tods.data\_processing.CategoricalToBinary
+CategoricalToBinary
 ------------------------------------------------
 
 .. autoclass:: tods.data_processing.CategoricalToBinary.CategoricalToBinaryPrimitive
 
 .. _tods.data_processing.ColumnFilter:
 
-tods.data\_processing.ColumnFilter
+ColumnFilter
 -----------------------------------------
 
 .. autoclass:: tods.data_processing.ColumnFilter.ColumnFilterPrimitive
 
 .. _tods.data_processing.ColumnParser:
 
-tods.data\_processing.ColumnParser
+ColumnParser
 -----------------------------------------
 
 .. autoclass:: tods.data_processing.ColumnParser.ColumnParserPrimitive
 
 .. _tods.data_processing.ConstructPredictions:
 
-tods.data\_processing.ConstructPredictions
+ConstructPredictions
 -------------------------------------------
 
 .. autoclass:: tods.data_processing.ConstructPredictions.ConstructPredictionsPrimitive
 
 .. _tods.data_processing.ContinuityValidation:
 
-tods.data\_processing.ContinuityValidation
+ContinuityValidation
 -------------------------------------------------
 
 .. autoclass:: tods.data_processing.ContinuityValidation.ContinuityValidationPrimitive
 
 .. _tods.data_processing.DatasetToDataframe:
 
-tods.data\_processing.DatasetToDataframe
+DatasetToDataframe
 -----------------------------------------------
 
 .. autoclass:: tods.data_processing.DatasetToDataframe.DatasetToDataFramePrimitive
 
 .. _tods.data_processing.DuplicationValidation:
 
-tods.data\_processing.DuplicationValidation
+DuplicationValidation
 --------------------------------------------------
 
 .. autoclass:: tods.data_processing.DuplicationValidation.DuplicationValidationPrimitive
 
 .. _tods.data_processing.ExtractColumnsBySemanticTypes:
 
-tods.data\_processing.ExtractColumnsBySemanticTypes
+ExtractColumnsBySemanticTypes
 ----------------------------------------------------
 
 .. autoclass:: tods.data_processing.ExtractColumnsBySemanticTypes.ExtractColumnsBySemanticTypesPrimitive
 
 .. _tods.data_processing.SKImputer:
 
-tods.data\_processing.SKImputer
+SKImputer
 --------------------------------------------------
 
 .. autoclass:: tods.data_processing.SKImputer.SKImputerPrimitive
 
 .. _tods.data_processing.TimeIntervalTransform:
 
-tods.data\_processing.TimeIntervalTransform
+TimeIntervalTransform
 --------------------------------------------------
 
 .. autoclass:: tods.data_processing.TimeIntervalTransform.TimeIntervalTransformPrimitive
 
 .. _tods.data_processing.TimeStampValidation:
 
-tods.data\_processing.TimeStampValidation
+TimeStampValidation
 ------------------------------------------------
 
 .. autoclass:: tods.data_processing.TimeStampValidation.TimeStampValidationPrimitive

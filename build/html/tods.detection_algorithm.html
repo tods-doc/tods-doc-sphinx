@@ -207,17 +207,17 @@
         <article role="main">
           <section id="tods-detection-algorithm">
 <h1>tods.detection_algorithm<a class="headerlink" href="#tods-detection-algorithm" title="Permalink to this headline">#</a></h1>
-<section id="tods-detection-algorithm-autoregodetect">
-<span id="id1"></span><h2>tods.detection_algorithm.AutoRegODetect<a class="headerlink" href="#tods-detection-algorithm-autoregodetect" title="Permalink to this headline">#</a></h2>
+<section id="autoregodetect">
+<span id="tods-detection-algorithm-autoregodetect"></span><h2>AutoRegODetect<a class="headerlink" href="#autoregodetect" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.AutoRegODetect.AutoRegODetectorPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.AutoRegODetect.</span></span><span class="sig-name descname"><span class="pre">AutoRegODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.AutoRegODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/AutoRegODetect.html#AutoRegODetectorPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.AutoRegODetect.AutoRegODetectorPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.AutoRegODetect.</span></span><span class="sig-name descname"><span class="pre">AutoRegODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.AutoRegODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/AutoRegODetect.py#L88"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.AutoRegODetect.AutoRegODetectorPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl>
 <dt>Autoregressive models use linear regression to calculate a sample’s</dt><dd><p>deviance from the predicted value, which is then used as its
 outlier scores. This model is for multivariate time series.
 This model handles multivariate time series by various combination
 approaches. See AutoRegOD for univarite data.</p>
-<p>See <a href="#id2"><span class="problematic" id="id3">:cite:`aggarwal2015outlier,zhao2020using`</span></a> for details.</p>
+<p>See <span id="id1">Aggarwal [<a class="reference internal" href="#id29" title="Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.">Agg15</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -242,12 +242,12 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id60"><span class="problematic" id="id61">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id67"><span class="problematic" id="id68">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id62"><span class="problematic" id="id63">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id69"><span class="problematic" id="id70">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -256,11 +256,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-dagmm">
-<span id="id4"></span><h2>tods.detection_algorithm.DAGMM<a class="headerlink" href="#tods-detection-algorithm-dagmm" title="Permalink to this headline">#</a></h2>
+<section id="dagmm">
+<span id="tods-detection-algorithm-dagmm"></span><h2>DAGMM<a class="headerlink" href="#dagmm" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.DAGMM.DAGMMPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.DAGMM.</span></span><span class="sig-name descname"><span class="pre">DAGMMPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.DAGMM.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/DAGMM.html#DAGMMPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.DAGMM.DAGMMPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.DAGMM.</span></span><span class="sig-name descname"><span class="pre">DAGMMPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.DAGMM.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/DAGMM.py#L99"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.DAGMM.DAGMMPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><blockquote>
 <div><p>Deep Autoencoding Gaussian Mixture Model</p>
 </div></blockquote>
@@ -284,11 +284,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-deeplog">
-<span id="id5"></span><h2>tods.detection_algorithm.DeepLog<a class="headerlink" href="#tods-detection-algorithm-deeplog" title="Permalink to this headline">#</a></h2>
+<section id="deeplog">
+<span id="tods-detection-algorithm-deeplog"></span><h2>DeepLog<a class="headerlink" href="#deeplog" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.DeepLog.DeepLogPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.DeepLog.</span></span><span class="sig-name descname"><span class="pre">DeepLogPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.DeepLog.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/DeepLog.html#DeepLogPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.DeepLog.DeepLogPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.DeepLog.</span></span><span class="sig-name descname"><span class="pre">DeepLogPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.DeepLog.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/DeepLog.py#L152"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.DeepLog.DeepLogPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><p>A primitive that uses DeepLog for outlier detection</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -313,13 +313,13 @@ and 1 for outliers/anomalies. It is generated by applying
 </dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-ensemble">
-<span id="id6"></span><h2>tods.detection_algorithm.Ensemble<a class="headerlink" href="#tods-detection-algorithm-ensemble" title="Permalink to this headline">#</a></h2>
+<section id="ensemble">
+<span id="tods-detection-algorithm-ensemble"></span><h2>Ensemble<a class="headerlink" href="#ensemble" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.Ensemble.EnsemblePrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.Ensemble.</span></span><span class="sig-name descname"><span class="pre">EnsemblePrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.Ensemble.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/Ensemble.html#EnsemblePrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.Ensemble.EnsemblePrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.Ensemble.</span></span><span class="sig-name descname"><span class="pre">EnsemblePrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.Ensemble.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/Ensemble.py#L112"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.Ensemble.EnsemblePrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
-<dt>Ensemble method</dt><dd><p><a href="#id64"><span class="problematic" id="id65">`Calculate the Maximum/Minimum/Average and  Majority Voting for the detection algorithm based on the threshold set for the score`_</span></a></p>
+<dt>Ensemble method</dt><dd><p>Calculate the Maximum/Minimum/Average and  Majority Voting for the detection algorithm based on the threshold set for the score</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -341,18 +341,18 @@ and 1 for outliers/anomalies. It is generated by applying
 </dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-kdiscordodetect">
-<span id="id7"></span><h2>tods.detection_algorithm.KDiscordODetect<a class="headerlink" href="#tods-detection-algorithm-kdiscordodetect" title="Permalink to this headline">#</a></h2>
+<section id="kdiscordodetect">
+<span id="tods-detection-algorithm-kdiscordodetect"></span><h2>KDiscordODetect<a class="headerlink" href="#kdiscordodetect" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.KDiscordODetect.KDiscordODetectorPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.KDiscordODetect.</span></span><span class="sig-name descname"><span class="pre">KDiscordODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.KDiscordODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/KDiscordODetect.html#KDiscordODetectorPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.KDiscordODetect.KDiscordODetectorPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.KDiscordODetect.</span></span><span class="sig-name descname"><span class="pre">KDiscordODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.KDiscordODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/KDiscordODetect.py#L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.KDiscordODetect.KDiscordODetectorPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl>
 <dt>KDiscord first split multivariate time series into</dt><dd><p>subsequences (matrices), and it use kNN outlier detection based on PyOD.
 For an observation, its distance to its kth nearest neighbor could be
 viewed as the outlying score. It could be viewed as a way to measure
-the density. See <a href="#id8"><span class="problematic" id="id9">:cite:`ramaswamy2000efficient,angiulli2002fast`</span></a> for
+the density. See <span id="id2">[<a class="reference internal" href="#id24" title="Fabrizio Angiulli and Clara Pizzuti. Fast outlier detection in high dimensional spaces. In European Conference on Principles of Data Mining and Knowledge Discovery, 15–27. Springer, 2002.">AP02</a>, <a class="reference internal" href="#id23" title="Sridhar Ramaswamy, Rajeev Rastogi, and Kyuseok Shim. Efficient algorithms for mining outliers from large data sets. In ACM Sigmod Record, volume 29, 427–438. ACM, 2000.">RRS00</a>]</span> for
 details.</p>
-<p>See <a href="#id10"><span class="problematic" id="id11">:cite:`aggarwal2015outlier,zhao2020using`</span></a> for details.</p>
+<p>See <span id="id3">[<a class="reference internal" href="#id29" title="Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.">Agg15</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -430,17 +430,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id66"><span class="problematic" id="id67">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id71"><span class="problematic" id="id72">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id68"><span class="problematic" id="id69">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id73"><span class="problematic" id="id74">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id70"><span class="problematic" id="id71">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id75"><span class="problematic" id="id76">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -449,11 +449,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-lstmodetect">
-<span id="id12"></span><h2>tods.detection_algorithm.LSTMODetect<a class="headerlink" href="#tods-detection-algorithm-lstmodetect" title="Permalink to this headline">#</a></h2>
+<section id="lstmodetect">
+<span id="tods-detection-algorithm-lstmodetect"></span><h2>LSTMODetect<a class="headerlink" href="#lstmodetect" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.LSTMODetect.LSTMODetectorPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.LSTMODetect.</span></span><span class="sig-name descname"><span class="pre">LSTMODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.LSTMODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/LSTMODetect.html#LSTMODetectorPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.LSTMODetect.LSTMODetectorPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.LSTMODetect.</span></span><span class="sig-name descname"><span class="pre">LSTMODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.LSTMODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/LSTMODetect.py#L164"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.LSTMODetect.LSTMODetectorPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><p>A base class for primitives which have to be fitted before they can start
 producing (useful) outputs from inputs, but they are fitted only on input data.</p>
 <dl class="field-list simple">
@@ -475,12 +475,12 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id72"><span class="problematic" id="id73">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id77"><span class="problematic" id="id78">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id74"><span class="problematic" id="id75">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id79"><span class="problematic" id="id80">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -489,11 +489,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-matrixprofile">
-<span id="id13"></span><h2>tods.detection_algorithm.MatrixProfile<a class="headerlink" href="#tods-detection-algorithm-matrixprofile" title="Permalink to this headline">#</a></h2>
+<section id="matrixprofile">
+<span id="tods-detection-algorithm-matrixprofile"></span><h2>MatrixProfile<a class="headerlink" href="#matrixprofile" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.MatrixProfile.MatrixProfilePrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.MatrixProfile.</span></span><span class="sig-name descname"><span class="pre">MatrixProfilePrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.MatrixProfile.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/MatrixProfile.html#MatrixProfilePrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.MatrixProfile.MatrixProfilePrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.MatrixProfile.</span></span><span class="sig-name descname"><span class="pre">MatrixProfilePrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.MatrixProfile.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/MatrixProfile.py#L186"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.MatrixProfile.MatrixProfilePrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>A primitive that performs matrix profile on a DataFrame using Stumpy package</dt><dd><p>Stumpy documentation: <a class="reference external" href="https://stumpy.readthedocs.io/en/latest/index.html">https://stumpy.readthedocs.io/en/latest/index.html</a></p>
 </dd>
@@ -528,11 +528,11 @@ the right matrix profile indices.</p>
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pcaodetect">
-<span id="id14"></span><h2>tods.detection_algorithm.PCAODetect<a class="headerlink" href="#tods-detection-algorithm-pcaodetect" title="Permalink to this headline">#</a></h2>
+<section id="pcaodetect">
+<span id="tods-detection-algorithm-pcaodetect"></span><h2>PCAODetect<a class="headerlink" href="#pcaodetect" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PCAODetect.PCAODetectorPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PCAODetect.</span></span><span class="sig-name descname"><span class="pre">PCAODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PCAODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PCAODetect.html#PCAODetectorPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PCAODetect.PCAODetectorPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PCAODetect.</span></span><span class="sig-name descname"><span class="pre">PCAODetectorPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PCAODetect.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PCAODetect.py#L151"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PCAODetect.PCAODetectorPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>PCA-based outlier detection with both univariate and multivariate</dt><dd><p>time series data. TS data will be first transformed to tabular format.
 For univariate data, it will be in shape of [valid_length, window_size].
@@ -627,17 +627,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id76"><span class="problematic" id="id77">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id81"><span class="problematic" id="id82">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id78"><span class="problematic" id="id79">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id83"><span class="problematic" id="id84">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id80"><span class="problematic" id="id81">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id85"><span class="problematic" id="id86">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -646,15 +646,15 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodabod">
-<span id="id15"></span><h2>tods.detection_algorithm.PyodABOD<a class="headerlink" href="#tods-detection-algorithm-pyodabod" title="Permalink to this headline">#</a></h2>
+<section id="pyodabod">
+<span id="tods-detection-algorithm-pyodabod"></span><h2>PyodABOD<a class="headerlink" href="#pyodabod" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodABOD.ABODPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodABOD.</span></span><span class="sig-name descname"><span class="pre">ABODPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodABOD.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodABOD.html#ABODPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodABOD.ABODPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodABOD.</span></span><span class="sig-name descname"><span class="pre">ABODPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodABOD.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodABOD.py#L68"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodABOD.ABODPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl>
 <dt>ABOD class for Angle-base Outlier Detection.</dt><dd><p>For an observation, the variance of its weighted cosine scores to all
 neighbors could be viewed as the outlying score.
-See <a href="#id16"><span class="problematic" id="id17">:cite:`kriegel2008angle`</span></a> for details.</p>
+See <span id="id4">[<a class="reference internal" href="#id25" title="Hans-Peter Kriegel, Arthur Zimek, and others. Angle-based outlier detection in high-dimensional data. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining, 444–452. ACM, 2008.">KZ+08</a>]</span> for details.</p>
 <p>Two versions of ABOD are supported:</p>
 <ul class="simple">
 <li><p>Fast ABOD: use k nearest neighbors to approximate.</p></li>
@@ -688,17 +688,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id82"><span class="problematic" id="id83">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id87"><span class="problematic" id="id88">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id84"><span class="problematic" id="id85">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id89"><span class="problematic" id="id90">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id86"><span class="problematic" id="id87">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id91"><span class="problematic" id="id92">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -707,15 +707,15 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodae">
-<span id="id18"></span><h2>tods.detection_algorithm.PyodAE<a class="headerlink" href="#tods-detection-algorithm-pyodae" title="Permalink to this headline">#</a></h2>
+<section id="pyodae">
+<span id="tods-detection-algorithm-pyodae"></span><h2>PyodAE<a class="headerlink" href="#pyodae" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodAE.AutoEncoderPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodAE.</span></span><span class="sig-name descname"><span class="pre">AutoEncoderPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodAE.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodAE.html#AutoEncoderPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodAE.AutoEncoderPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodAE.</span></span><span class="sig-name descname"><span class="pre">AutoEncoderPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodAE.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodAE.py#L172"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodAE.AutoEncoderPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Auto Encoder (AE) is a type of neural networks for learning useful data</dt><dd><p>representations unsupervisedly. Similar to PCA, AE could be used to
 detect outlying objects in the data by calculating the reconstruction
-errors. See <a href="#id19"><span class="problematic" id="id20">:cite:`aggarwal2015outlier`</span></a> Chapter 3 for details.</p>
+errors. See <span id="id5">[<a class="reference internal" href="#id29" title="Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.">Agg15</a>]</span> Chapter 3 for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -763,26 +763,26 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id88"><span class="problematic" id="id89">encoding_dim_</span></a><span class="classifier">int</span></dt><dd><p class="sd-card-text">The number of neurons in the encoding layer.</p>
+<dt><a href="#id93"><span class="problematic" id="id94">encoding_dim_</span></a><span class="classifier">int</span></dt><dd><p class="sd-card-text">The number of neurons in the encoding layer.</p>
 </dd>
-<dt><a href="#id90"><span class="problematic" id="id91">compression_rate_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The ratio between the original feature and
+<dt><a href="#id95"><span class="problematic" id="id96">compression_rate_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The ratio between the original feature and
 the number of neurons in the encoding layer.</p>
 </dd>
-<dt><a href="#id92"><span class="problematic" id="id93">model_</span></a><span class="classifier">Keras Object</span></dt><dd><p class="sd-card-text">The underlying AutoEncoder in Keras.</p>
+<dt><a href="#id97"><span class="problematic" id="id98">model_</span></a><span class="classifier">Keras Object</span></dt><dd><p class="sd-card-text">The underlying AutoEncoder in Keras.</p>
 </dd>
-<dt><a href="#id94"><span class="problematic" id="id95">history_</span></a>: Keras Object</dt><dd><p class="sd-card-text">The AutoEncoder training history.</p>
+<dt><a href="#id99"><span class="problematic" id="id100">history_</span></a>: Keras Object</dt><dd><p class="sd-card-text">The AutoEncoder training history.</p>
 </dd>
-<dt><a href="#id96"><span class="problematic" id="id97">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id101"><span class="problematic" id="id102">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id98"><span class="problematic" id="id99">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id103"><span class="problematic" id="id104">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id100"><span class="problematic" id="id101">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id105"><span class="problematic" id="id106">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -791,11 +791,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodcblof">
-<span id="id21"></span><h2>tods.detection_algorithm.PyodCBLOF<a class="headerlink" href="#tods-detection-algorithm-pyodcblof" title="Permalink to this headline">#</a></h2>
+<section id="pyodcblof">
+<span id="tods-detection-algorithm-pyodcblof"></span><h2>PyodCBLOF<a class="headerlink" href="#pyodcblof" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodCBLOF.CBLOFPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodCBLOF.</span></span><span class="sig-name descname"><span class="pre">CBLOFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodCBLOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodCBLOF.html#CBLOFPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodCBLOF.CBLOFPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodCBLOF.</span></span><span class="sig-name descname"><span class="pre">CBLOFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodCBLOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodCBLOF.py#L116"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodCBLOF.CBLOFPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>The CBLOF operator calculates the outlier score based on cluster-based</dt><dd><p>local outlier factor.
 CBLOF takes as an input the data set and the cluster model that was
@@ -810,7 +810,7 @@ by default.Outliers scores are solely computed based on their distance to
 the closest large cluster center.
 By default, kMeans is used for clustering algorithm instead of
 Squeezer algorithm mentioned in the original paper for multiple reasons.
-See <a href="#id22"><span class="problematic" id="id23">:cite:`he2003discovering`</span></a> for details.</p>
+See <span id="id6">[<a class="reference internal" href="#id34" title="Zengyou He, Xiaofei Xu, and Shengchun Deng. Discovering cluster-based local outliers. Pattern Recognition Letters, 24(9-10):1641–1650, 2003.">HXD03</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -858,17 +858,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id102"><span class="problematic" id="id103">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id107"><span class="problematic" id="id108">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id104"><span class="problematic" id="id105">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id109"><span class="problematic" id="id110">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id106"><span class="problematic" id="id107">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id111"><span class="problematic" id="id112">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -877,16 +877,16 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodcof">
-<span id="id24"></span><h2>tods.detection_algorithm.PyodCOF<a class="headerlink" href="#tods-detection-algorithm-pyodcof" title="Permalink to this headline">#</a></h2>
+<section id="pyodcof">
+<span id="tods-detection-algorithm-pyodcof"></span><h2>PyodCOF<a class="headerlink" href="#pyodcof" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodCOF.COFPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodCOF.</span></span><span class="sig-name descname"><span class="pre">COFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodCOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodCOF.html#COFPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodCOF.COFPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodCOF.</span></span><span class="sig-name descname"><span class="pre">COFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodCOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodCOF.py#L70"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodCOF.COFPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Connectivity-Based Outlier Factor (COF) COF uses the ratio of average</dt><dd><p>chaining distance of data point and the average of average chaining
 distance of k nearest neighbor of the data point, as the outlier score
 for observations.
-See <a href="#id25"><span class="problematic" id="id26">:cite:`tang2002enhancing`</span></a> for details.</p>
+See <span id="id7">[<a class="reference internal" href="#id44" title="Jian Tang, Zhixiang Chen, Ada Wai-Chee Fu, and David W Cheung. Enhancing effectiveness of outlier detections for low density patterns. In Pacific-Asia Conference on Knowledge Discovery and Data Mining, 535–548. Springer, 2002.">TCFC02</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -910,36 +910,36 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id108"><span class="problematic" id="id109">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id113"><span class="problematic" id="id114">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id110"><span class="problematic" id="id111">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id115"><span class="problematic" id="id116">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id112"><span class="problematic" id="id113">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id117"><span class="problematic" id="id118">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
-<dt><a href="#id114"><span class="problematic" id="id115">n_neighbors_</span></a>: int</dt><dd><p class="sd-card-text">Number of neighbors to use by default for k neighbors queries.</p>
+<dt><a href="#id119"><span class="problematic" id="id120">n_neighbors_</span></a>: int</dt><dd><p class="sd-card-text">Number of neighbors to use by default for k neighbors queries.</p>
 </dd>
 </dl>
 </div>
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodhbos">
-<span id="id27"></span><h2>tods.detection_algorithm.PyodHBOS<a class="headerlink" href="#tods-detection-algorithm-pyodhbos" title="Permalink to this headline">#</a></h2>
+<section id="pyodhbos">
+<span id="tods-detection-algorithm-pyodhbos"></span><h2>PyodHBOS<a class="headerlink" href="#pyodhbos" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodHBOS.HBOSPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodHBOS.</span></span><span class="sig-name descname"><span class="pre">HBOSPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodHBOS.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodHBOS.html#HBOSPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodHBOS.HBOSPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodHBOS.</span></span><span class="sig-name descname"><span class="pre">HBOSPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodHBOS.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodHBOS.py#L76"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodHBOS.HBOSPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Histogram-based Outlier Detection (HBOS)</dt><dd><p>Histogram- based outlier detection (HBOS) is an efficient unsupervised
 method. It assumes the feature independence and calculates the degree
-of outlyingness by building histograms. See <a href="#id28"><span class="problematic" id="id29">:cite:`goldstein2012histogram`</span></a>
+of outlyingness by building histograms. See <span id="id8">[<a class="reference internal" href="#id27" title="Markus Goldstein and Andreas Dengel. Histogram-based outlier score (hbos): a fast unsupervised anomaly detection algorithm. KI-2012: Poster and Demo Track, pages 59–63, 2012.">GD12</a>]</span>
 for details.</p>
 </dd>
 </dl>
@@ -964,20 +964,20 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id116"><span class="problematic" id="id117">bin_edges_</span></a><span class="classifier">numpy array of shape (n_bins + 1, n_features )</span></dt><dd><p class="sd-card-text">The edges of the bins.</p>
+<dt><a href="#id121"><span class="problematic" id="id122">bin_edges_</span></a><span class="classifier">numpy array of shape (n_bins + 1, n_features )</span></dt><dd><p class="sd-card-text">The edges of the bins.</p>
 </dd>
-<dt><a href="#id118"><span class="problematic" id="id119">hist_</span></a><span class="classifier">numpy array of shape (n_bins, n_features)</span></dt><dd><p class="sd-card-text">The density of each histogram.</p>
+<dt><a href="#id123"><span class="problematic" id="id124">hist_</span></a><span class="classifier">numpy array of shape (n_bins, n_features)</span></dt><dd><p class="sd-card-text">The density of each histogram.</p>
 </dd>
-<dt><a href="#id120"><span class="problematic" id="id121">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id125"><span class="problematic" id="id126">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is fitted.</p>
 </dd>
-<dt><a href="#id122"><span class="problematic" id="id123">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id127"><span class="problematic" id="id128">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id124"><span class="problematic" id="id125">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id129"><span class="problematic" id="id130">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -986,16 +986,16 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodisolationforest">
-<span id="id30"></span><h2>tods.detection_algorithm.PyodIsolationForest<a class="headerlink" href="#tods-detection-algorithm-pyodisolationforest" title="Permalink to this headline">#</a></h2>
+<section id="pyodisolationforest">
+<span id="tods-detection-algorithm-pyodisolationforest"></span><h2>PyodIsolationForest<a class="headerlink" href="#pyodisolationforest" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodIsolationForest.IsolationForestPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodIsolationForest.</span></span><span class="sig-name descname"><span class="pre">IsolationForestPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodIsolationForest.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodIsolationForest.html#IsolationForestPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodIsolationForest.IsolationForestPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodIsolationForest.</span></span><span class="sig-name descname"><span class="pre">IsolationForestPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodIsolationForest.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodIsolationForest.py#L109"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodIsolationForest.IsolationForestPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Wrapper of Pyod Isolation Forest with more functionalities.</dt><dd><p>The IsolationForest ‘isolates’ observations by randomly selecting a
 feature and then randomly selecting a split value between the maximum and
 minimum values of the selected feature.
-See <a href="#id31"><span class="problematic" id="id32">:cite:`liu2008isolation,liu2012isolation`</span></a> for details.
+See <span id="id9">[<a class="reference internal" href="#id19" title="Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou. Isolation forest. In Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on, 413–422. IEEE, 2008.">LTZ08</a>, <a class="reference internal" href="#id20" title="Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou. Isolation-based anomaly detection. ACM Transactions on Knowledge Discovery from Data (TKDD), 6(1):3, 2012.">LTZ12</a>]</span> for details.
 Since recursive partitioning can be represented by a tree structure, the
 number of splittings required to isolate a sample is equivalent to the path
 length from the root node to the terminating node.
@@ -1058,17 +1058,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id126"><span class="problematic" id="id127">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id131"><span class="problematic" id="id132">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id128"><span class="problematic" id="id129">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id133"><span class="problematic" id="id134">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id130"><span class="problematic" id="id131">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id135"><span class="problematic" id="id136">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1077,15 +1077,15 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodknn">
-<span id="id33"></span><h2>tods.detection_algorithm.PyodKNN<a class="headerlink" href="#tods-detection-algorithm-pyodknn" title="Permalink to this headline">#</a></h2>
+<section id="pyodknn">
+<span id="tods-detection-algorithm-pyodknn"></span><h2>PyodKNN<a class="headerlink" href="#pyodknn" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodKNN.KNNPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodKNN.</span></span><span class="sig-name descname"><span class="pre">KNNPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodKNN.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodKNN.html#KNNPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodKNN.KNNPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodKNN.</span></span><span class="sig-name descname"><span class="pre">KNNPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodKNN.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodKNN.py#L123"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodKNN.KNNPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>kNN class for outlier detection.</dt><dd><p>For an observation, its distance to its kth nearest neighbor could be
 viewed as the outlying score. It could be viewed as a way to measure
-the density. See <a href="#id34"><span class="problematic" id="id35">:cite:`ramaswamy2000efficient,angiulli2002fast`</span></a> for
+the density. See <span id="id10">[<a class="reference internal" href="#id24" title="Fabrizio Angiulli and Clara Pizzuti. Fast outlier detection in high dimensional spaces. In European Conference on Principles of Data Mining and Knowledge Discovery, 15–27. Springer, 2002.">AP02</a>, <a class="reference internal" href="#id23" title="Sridhar Ramaswamy, Rajeev Rastogi, and Kyuseok Shim. Efficient algorithms for mining outliers from large data sets. In ACM Sigmod Record, volume 29, 427–438. ACM, 2000.">RRS00</a>]</span> for
 details.
 Three kNN detectors are supported:
 largest: use the distance to the kth neighbor as the outlier score
@@ -1171,17 +1171,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id132"><span class="problematic" id="id133">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id137"><span class="problematic" id="id138">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id134"><span class="problematic" id="id135">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id139"><span class="problematic" id="id140">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id136"><span class="problematic" id="id137">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id141"><span class="problematic" id="id142">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1190,13 +1190,13 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodloda">
-<span id="id36"></span><h2>tods.detection_algorithm.PyodLODA<a class="headerlink" href="#tods-detection-algorithm-pyodloda" title="Permalink to this headline">#</a></h2>
+<section id="pyodloda">
+<span id="tods-detection-algorithm-pyodloda"></span><h2>PyodLODA<a class="headerlink" href="#pyodloda" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodLODA.LODAPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodLODA.</span></span><span class="sig-name descname"><span class="pre">LODAPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodLODA.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodLODA.html#LODAPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodLODA.LODAPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodLODA.</span></span><span class="sig-name descname"><span class="pre">LODAPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodLODA.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodLODA.py#L69"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodLODA.LODAPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
-<dt>Wrap of Pyod loda. Loda: Lightweight on-line detector of anomalies. See</dt><dd><p><a href="#id37"><span class="problematic" id="id38">:cite:`pevny2016loda`</span></a> for more information.</p>
+<dt>Wrap of Pyod loda. Loda: Lightweight on-line detector of anomalies. See</dt><dd><p><span id="id11">[<a class="reference internal" href="#id52" title="Tomáš Pevn\`y. Loda: lightweight on-line detector of anomalies. Machine Learning, 102(2):275–304, 2016.">Pevny16</a>]</span> for more information.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1218,17 +1218,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id138"><span class="problematic" id="id139">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id143"><span class="problematic" id="id144">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id140"><span class="problematic" id="id141">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id145"><span class="problematic" id="id146">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id142"><span class="problematic" id="id143">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id147"><span class="problematic" id="id148">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1237,11 +1237,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodlof">
-<span id="id39"></span><h2>tods.detection_algorithm.PyodLOF<a class="headerlink" href="#tods-detection-algorithm-pyodlof" title="Permalink to this headline">#</a></h2>
+<section id="pyodlof">
+<span id="tods-detection-algorithm-pyodlof"></span><h2>PyodLOF<a class="headerlink" href="#pyodlof" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodLOF.LOFPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodLOF.</span></span><span class="sig-name descname"><span class="pre">LOFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodLOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodLOF.html#LOFPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodLOF.LOFPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodLOF.</span></span><span class="sig-name descname"><span class="pre">LOFPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodLOF.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodLOF.py#L110"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodLOF.LOFPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Wrapper of Pyod LOF Class with more functionalities.</dt><dd><p>Unsupervised Outlier Detection using Local Outlier Factor (LOF).
 The anomaly score of each sample is called Local Outlier Factor.
@@ -1254,7 +1254,7 @@ is used to estimate the local density.
 By comparing the local density of a sample to the local densities of
 its neighbors, one can identify samples that have a substantially lower
 density than their neighbors. These are considered outliers.
-See <a href="#id40"><span class="problematic" id="id41">:cite:`breunig2000lof`</span></a> for details.</p>
+See <span id="id12">[<a class="reference internal" href="#id30" title="Markus M Breunig, Hans-Peter Kriegel, Raymond T Ng, and Jörg Sander. Lof: identifying density-based local outliers. In ACM sigmod record, volume 29, 93–104. ACM, 2000.">BKNS00</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1324,17 +1324,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id144"><span class="problematic" id="id145">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id149"><span class="problematic" id="id150">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id146"><span class="problematic" id="id147">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id151"><span class="problematic" id="id152">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id148"><span class="problematic" id="id149">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id153"><span class="problematic" id="id154">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1343,11 +1343,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodmogaal">
-<span id="id42"></span><h2>tods.detection_algorithm.PyodMoGaal<a class="headerlink" href="#tods-detection-algorithm-pyodmogaal" title="Permalink to this headline">#</a></h2>
+<section id="pyodmogaal">
+<span id="tods-detection-algorithm-pyodmogaal"></span><h2>PyodMoGaal<a class="headerlink" href="#pyodmogaal" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodMoGaal.Mo_GaalPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodMoGaal.</span></span><span class="sig-name descname"><span class="pre">Mo_GaalPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodMoGaal.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodMoGaal.html#Mo_GaalPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodMoGaal.Mo_GaalPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodMoGaal.</span></span><span class="sig-name descname"><span class="pre">Mo_GaalPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodMoGaal.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodMoGaal.py#L125"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodMoGaal.Mo_GaalPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Multi-Objective Generative Adversarial Active Learning.</dt><dd><p>MO_GAAL directly generates informative potential outliers to assist the
 classifier in describing a boundary that can separate outliers from normal
@@ -1356,7 +1356,7 @@ mode collapsing problem, the network structure of SO-GAAL is expanded from
 a single generator (SO-GAAL) to multiple generators with different
 objectives (MO-GAAL) to generate a reasonable reference distribution for
 the whole dataset.
-Read more in the <a href="#id43"><span class="problematic" id="id44">:cite:`liu2019generative`</span></a>.</p>
+Read more in the <span id="id13">[<a class="reference internal" href="#id39" title="Yezheng Liu, Zhe Li, Chong Zhou, Yuanchun Jiang, Jianshan Sun, Meng Wang, and Xiangnan He. Generative adversarial active learning for unsupervised outlier detection. IEEE Transactions on Knowledge and Data Engineering, 2019.">LLZ+19</a>]</span>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1382,16 +1382,16 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id150"><span class="problematic" id="id151">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id155"><span class="problematic" id="id156">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is fitted.</p>
 </dd>
-<dt><a href="#id152"><span class="problematic" id="id153">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id157"><span class="problematic" id="id158">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id154"><span class="problematic" id="id155">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id159"><span class="problematic" id="id160">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1400,17 +1400,17 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodocsvm">
-<span id="id45"></span><h2>tods.detection_algorithm.PyodOCSVM<a class="headerlink" href="#tods-detection-algorithm-pyodocsvm" title="Permalink to this headline">#</a></h2>
+<section id="pyodocsvm">
+<span id="tods-detection-algorithm-pyodocsvm"></span><h2>PyodOCSVM<a class="headerlink" href="#pyodocsvm" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodOCSVM.OCSVMPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodOCSVM.</span></span><span class="sig-name descname"><span class="pre">OCSVMPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodOCSVM.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodOCSVM.html#OCSVMPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodOCSVM.OCSVMPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodOCSVM.</span></span><span class="sig-name descname"><span class="pre">OCSVMPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodOCSVM.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodOCSVM.py#L128"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodOCSVM.OCSVMPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Wrapper of scikit-learn one-class SVM Class with more functionalities.</dt><dd><p>Unsupervised Outlier Detection.
 Estimate the support of a high-dimensional distribution.
 The implementation is based on libsvm.
 See <a class="reference external" href="http://scikit-learn.org/stable/modules/svm.html#svm-outlier-detection">http://scikit-learn.org/stable/modules/svm.html#svm-outlier-detection</a>
-and <a href="#id46"><span class="problematic" id="id47">:cite:`scholkopf2001estimating`</span></a>.</p>
+and <span id="id14">[<a class="reference internal" href="#id43" title="Bernhard Schölkopf, John C Platt, John Shawe-Taylor, Alex J Smola, and Robert C Williamson. Estimating the support of a high-dimensional distribution. Neural computation, 13(7):1443–1471, 2001.">ScholkopfPST+01</a>]</span>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1449,16 +1449,16 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id156"><span class="problematic" id="id157">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id161"><span class="problematic" id="id162">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is fitted.</p>
 </dd>
-<dt><a href="#id158"><span class="problematic" id="id159">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id163"><span class="problematic" id="id164">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id160"><span class="problematic" id="id161">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id165"><span class="problematic" id="id166">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1467,17 +1467,17 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodsod">
-<span id="id48"></span><h2>tods.detection_algorithm.PyodSOD<a class="headerlink" href="#tods-detection-algorithm-pyodsod" title="Permalink to this headline">#</a></h2>
+<section id="pyodsod">
+<span id="tods-detection-algorithm-pyodsod"></span><h2>PyodSOD<a class="headerlink" href="#pyodsod" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodSOD.SODPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodSOD.</span></span><span class="sig-name descname"><span class="pre">SODPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodSOD.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodSOD.html#SODPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodSOD.SODPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodSOD.</span></span><span class="sig-name descname"><span class="pre">SODPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodSOD.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodSOD.py#L74"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodSOD.SODPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Subspace outlier detection (SOD) schema aims to detect outlier in</dt><dd><p>varying subspaces of a high dimensional feature space. For each data
 object, SOD explores the axis-parallel subspace spanned by the data
 object’s neighbors and determines how much the object deviates from the
 neighbors in this subspace.
-See <a href="#id49"><span class="problematic" id="id50">:cite:`kriegel2009outlier`</span></a> for details.</p>
+See <span id="id15">[<a class="reference internal" href="#id46" title="Hans-Peter Kriegel, Peer Kröger, Erich Schubert, and Arthur Zimek. Outlier detection in axis-parallel subspaces of high dimensional data. In Pacific-Asia Conference on Knowledge Discovery and Data Mining, 831–838. Springer, 2009.">KKrogerSZ09</a>]</span> for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1502,17 +1502,17 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id162"><span class="problematic" id="id163">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id167"><span class="problematic" id="id168">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id164"><span class="problematic" id="id165">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id169"><span class="problematic" id="id170">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id166"><span class="problematic" id="id167">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id171"><span class="problematic" id="id172">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1521,11 +1521,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodsogaal">
-<span id="id51"></span><h2>tods.detection_algorithm.PyodSoGaal<a class="headerlink" href="#tods-detection-algorithm-pyodsogaal" title="Permalink to this headline">#</a></h2>
+<section id="pyodsogaal">
+<span id="tods-detection-algorithm-pyodsogaal"></span><h2>PyodSoGaal<a class="headerlink" href="#pyodsogaal" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodSoGaal.So_GaalPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodSoGaal.</span></span><span class="sig-name descname"><span class="pre">So_GaalPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodSoGaal.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodSoGaal.html#So_GaalPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodSoGaal.So_GaalPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodSoGaal.</span></span><span class="sig-name descname"><span class="pre">So_GaalPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodSoGaal.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodSoGaal.py#L118"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodSoGaal.So_GaalPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Single-Objective Generative Adversarial Active Learning.</dt><dd><p>SO-GAAL directly generates informative potential outliers to assist the
 classifier in describing a boundary that can separate outliers from normal
@@ -1534,7 +1534,7 @@ mode collapsing problem, the network structure of SO-GAAL is expanded from
 a single generator (SO-GAAL) to multiple generators with different
 objectives (MO-GAAL) to generate a reasonable reference distribution for
 the whole dataset.
-Read more in the <a href="#id52"><span class="problematic" id="id53">:cite:`liu2019generative`</span></a>.</p>
+Read more in the <span id="id16">[<a class="reference internal" href="#id39" title="Yezheng Liu, Zhe Li, Chong Zhou, Yuanchun Jiang, Jianshan Sun, Meng Wang, and Xiangnan He. Generative adversarial active learning for unsupervised outlier detection. IEEE Transactions on Knowledge and Data Engineering, 2019.">LLZ+19</a>]</span>.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1559,16 +1559,16 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id168"><span class="problematic" id="id169">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id173"><span class="problematic" id="id174">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is fitted.</p>
 </dd>
-<dt><a href="#id170"><span class="problematic" id="id171">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id175"><span class="problematic" id="id176">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id172"><span class="problematic" id="id173">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id177"><span class="problematic" id="id178">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1577,15 +1577,15 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-pyodvae">
-<span id="id54"></span><h2>tods.detection_algorithm.PyodVAE<a class="headerlink" href="#tods-detection-algorithm-pyodvae" title="Permalink to this headline">#</a></h2>
+<section id="pyodvae">
+<span id="tods-detection-algorithm-pyodvae"></span><h2>PyodVAE<a class="headerlink" href="#pyodvae" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.PyodVAE.VariationalAutoEncoderPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodVAE.</span></span><span class="sig-name descname"><span class="pre">VariationalAutoEncoderPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodVAE.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/PyodVAE.html#VariationalAutoEncoderPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodVAE.VariationalAutoEncoderPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.PyodVAE.</span></span><span class="sig-name descname"><span class="pre">VariationalAutoEncoderPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.PyodVAE.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/PyodVAE.py#L189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.PyodVAE.VariationalAutoEncoderPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><dl class="simple">
 <dt>Auto Encoder (AE) is a type of neural networks for learning useful data</dt><dd><p>representations unsupervisedly. Similar to PCA, AE could be used to
 detect outlying objects in the data by calculating the reconstruction
-errors. See <a href="#id55"><span class="problematic" id="id56">:cite:`aggarwal2015outlier`</span></a> Chapter 3 for details.</p>
+errors. See <span id="id17">[<a class="reference internal" href="#id29" title="Charu C Aggarwal. Outlier analysis. In Data mining, 75–79. Springer, 2015.">Agg15</a>]</span> Chapter 3 for details.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -1633,26 +1633,26 @@ Attributes<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <dl class="simple">
-<dt><a href="#id174"><span class="problematic" id="id175">encoding_dim_</span></a><span class="classifier">int</span></dt><dd><p class="sd-card-text">The number of neurons in the encoding layer.</p>
+<dt><a href="#id179"><span class="problematic" id="id180">encoding_dim_</span></a><span class="classifier">int</span></dt><dd><p class="sd-card-text">The number of neurons in the encoding layer.</p>
 </dd>
-<dt><a href="#id176"><span class="problematic" id="id177">compression_rate_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The ratio between the original feature and
+<dt><a href="#id181"><span class="problematic" id="id182">compression_rate_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The ratio between the original feature and
 the number of neurons in the encoding layer.</p>
 </dd>
-<dt><a href="#id178"><span class="problematic" id="id179">model_</span></a><span class="classifier">Keras Object</span></dt><dd><p class="sd-card-text">The underlying AutoEncoder in Keras.</p>
+<dt><a href="#id183"><span class="problematic" id="id184">model_</span></a><span class="classifier">Keras Object</span></dt><dd><p class="sd-card-text">The underlying AutoEncoder in Keras.</p>
 </dd>
-<dt><a href="#id180"><span class="problematic" id="id181">history_</span></a>: Keras Object</dt><dd><p class="sd-card-text">The AutoEncoder training history.</p>
+<dt><a href="#id185"><span class="problematic" id="id186">history_</span></a>: Keras Object</dt><dd><p class="sd-card-text">The AutoEncoder training history.</p>
 </dd>
-<dt><a href="#id182"><span class="problematic" id="id183">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
+<dt><a href="#id187"><span class="problematic" id="id188">decision_scores_</span></a><span class="classifier">numpy array of shape (n_samples,)</span></dt><dd><p class="sd-card-text">The outlier scores of the training data.
 The higher, the more abnormal. Outliers tend to have higher
 scores. This value is available once the detector is
 fitted.</p>
 </dd>
-<dt><a href="#id184"><span class="problematic" id="id185">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
+<dt><a href="#id189"><span class="problematic" id="id190">threshold_</span></a><span class="classifier">float</span></dt><dd><p class="sd-card-text">The threshold is based on <code class="docutils literal notranslate"><span class="pre">contamination</span></code>. It is the
 <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">*</span> <span class="pre">contamination</span></code> most abnormal samples in
 <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>. The threshold is calculated for generating
 binary outlier labels.</p>
 </dd>
-<dt><a href="#id186"><span class="problematic" id="id187">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
+<dt><a href="#id191"><span class="problematic" id="id192">labels_</span></a><span class="classifier">int, either 0 or 1</span></dt><dd><p class="sd-card-text">The binary labels of the training data. 0 stands for inliers
 and 1 for outliers/anomalies. It is generated by applying
 <code class="docutils literal notranslate"><span class="pre">threshold_</span></code> on <code class="docutils literal notranslate"><span class="pre">decision_scores_</span></code>.</p>
 </dd>
@@ -1661,11 +1661,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-systemwisedetection">
-<span id="id57"></span><h2>tods.detection_algorithm.SystemWiseDetection<a class="headerlink" href="#tods-detection-algorithm-systemwisedetection" title="Permalink to this headline">#</a></h2>
+<section id="systemwisedetection">
+<span id="tods-detection-algorithm-systemwisedetection"></span><h2>SystemWiseDetection<a class="headerlink" href="#systemwisedetection" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.SystemWiseDetection.SystemWiseDetectionPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.SystemWiseDetection.</span></span><span class="sig-name descname"><span class="pre">SystemWiseDetectionPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.SystemWiseDetection.Hyperparams</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/SystemWiseDetection.html#SystemWiseDetectionPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.SystemWiseDetection.SystemWiseDetectionPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.SystemWiseDetection.</span></span><span class="sig-name descname"><span class="pre">SystemWiseDetectionPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.SystemWiseDetection.Hyperparams</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/SystemWiseDetection.py#L105"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.SystemWiseDetection.SystemWiseDetectionPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><p>Primitive to find abs_energy of time series.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1679,11 +1679,11 @@ and 1 for outliers/anomalies. It is generated by applying
 </dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-telemanom">
-<span id="id58"></span><h2>tods.detection_algorithm.Telemanom<a class="headerlink" href="#tods-detection-algorithm-telemanom" title="Permalink to this headline">#</a></h2>
+<section id="telemanom">
+<span id="tods-detection-algorithm-telemanom"></span><h2>Telemanom<a class="headerlink" href="#telemanom" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.Telemanom.TelemanomPrimitive">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.Telemanom.</span></span><span class="sig-name descname"><span class="pre">TelemanomPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.Telemanom.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/Telemanom.html#TelemanomPrimitive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.Telemanom.TelemanomPrimitive" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.Telemanom.</span></span><span class="sig-name descname"><span class="pre">TelemanomPrimitive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tods.detection_algorithm.Telemanom.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/Telemanom.py#L189"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.Telemanom.TelemanomPrimitive" title="Permalink to this definition">#</a></dt>
 <dd><p>A primitive that uses telmanom for outlier detection</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1764,15 +1764,64 @@ Contamination<div class="sd-summary-down docutils">
 </details></dd></dl>
 
 </section>
-<section id="tods-detection-algorithm-uodbaseprimitive">
-<span id="id59"></span><h2>tods.detection_algorithm.UODBasePrimitive<a class="headerlink" href="#tods-detection-algorithm-uodbaseprimitive" title="Permalink to this headline">#</a></h2>
+<section id="uodbaseprimitive">
+<span id="tods-detection-algorithm-uodbaseprimitive"></span><h2>UODBasePrimitive<a class="headerlink" href="#uodbaseprimitive" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tods.detection_algorithm.UODBasePrimitive.UnsupervisedOutlierDetectorBase">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.UODBasePrimitive.</span></span><span class="sig-name descname"><span class="pre">UnsupervisedOutlierDetectorBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">d3m.primitive_interfaces.base.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tods/detection_algorithm/UODBasePrimitive.html#UnsupervisedOutlierDetectorBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.UODBasePrimitive.UnsupervisedOutlierDetectorBase" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tods.detection_algorithm.UODBasePrimitive.</span></span><span class="sig-name descname"><span class="pre">UnsupervisedOutlierDetectorBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hyperparams</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">d3m.primitive_interfaces.base.Hyperparams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docker_containers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">d3m.primitive_interfaces.base.DockerContainer</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/datamllab/tods/blob/master/tods/detection_algorithm/UODBasePrimitive.py#L148"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tods.detection_algorithm.UODBasePrimitive.UnsupervisedOutlierDetectorBase" title="Permalink to this definition">#</a></dt>
 <dd><p>A base class for primitives which have to be fitted before they can start
 producing (useful) outputs from inputs, but they are fitted only on input data.</p>
 </dd></dl>
 
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h2>
+<div class="docutils container" id="id18">
+<dl class="citation">
+<dt class="label" id="id29"><span class="brackets">Agg15</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id3">2</a>,<a href="#id5">3</a>,<a href="#id17">4</a>)</span></dt>
+<dd><p>Charu C Aggarwal. Outlier analysis. In <em>Data mining</em>, 75–79. Springer, 2015.</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets">AP02</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
+<dd><p>Fabrizio Angiulli and Clara Pizzuti. Fast outlier detection in high dimensional spaces. In <em>European Conference on Principles of Data Mining and Knowledge Discovery</em>, 15–27. Springer, 2002.</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id12">BKNS00</a></span></dt>
+<dd><p>Markus M Breunig, Hans-Peter Kriegel, Raymond T Ng, and Jörg Sander. Lof: identifying density-based local outliers. In <em>ACM sigmod record</em>, volume 29, 93–104. ACM, 2000.</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id8">GD12</a></span></dt>
+<dd><p>Markus Goldstein and Andreas Dengel. Histogram-based outlier score (hbos): a fast unsupervised anomaly detection algorithm. <em>KI-2012: Poster and Demo Track</em>, pages 59–63, 2012.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id6">HXD03</a></span></dt>
+<dd><p>Zengyou He, Xiaofei Xu, and Shengchun Deng. Discovering cluster-based local outliers. <em>Pattern Recognition Letters</em>, 24(9-10):1641–1650, 2003.</p>
+</dd>
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id15">KKrogerSZ09</a></span></dt>
+<dd><p>Hans-Peter Kriegel, Peer Kröger, Erich Schubert, and Arthur Zimek. Outlier detection in axis-parallel subspaces of high dimensional data. In <em>Pacific-Asia Conference on Knowledge Discovery and Data Mining</em>, 831–838. Springer, 2009.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id4">KZ+08</a></span></dt>
+<dd><p>Hans-Peter Kriegel, Arthur Zimek, and others. Angle-based outlier detection in high-dimensional data. In <em>Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining</em>, 444–452. ACM, 2008.</p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id9">LTZ08</a></span></dt>
+<dd><p>Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou. Isolation forest. In <em>Data Mining, 2008. ICDM'08. Eighth IEEE International Conference on</em>, 413–422. IEEE, 2008.</p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id9">LTZ12</a></span></dt>
+<dd><p>Fei Tony Liu, Kai Ming Ting, and Zhi-Hua Zhou. Isolation-based anomaly detection. <em>ACM Transactions on Knowledge Discovery from Data (TKDD)</em>, 6(1):3, 2012.</p>
+</dd>
+<dt class="label" id="id39"><span class="brackets">LLZ+19</span><span class="fn-backref">(<a href="#id13">1</a>,<a href="#id16">2</a>)</span></dt>
+<dd><p>Yezheng Liu, Zhe Li, Chong Zhou, Yuanchun Jiang, Jianshan Sun, Meng Wang, and Xiangnan He. Generative adversarial active learning for unsupervised outlier detection. <em>IEEE Transactions on Knowledge and Data Engineering</em>, 2019.</p>
+</dd>
+<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id11">Pevny16</a></span></dt>
+<dd><p>Tomáš Pevn\`y. Loda: lightweight on-line detector of anomalies. <em>Machine Learning</em>, 102(2):275–304, 2016.</p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">RRS00</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id10">2</a>)</span></dt>
+<dd><p>Sridhar Ramaswamy, Rajeev Rastogi, and Kyuseok Shim. Efficient algorithms for mining outliers from large data sets. In <em>ACM Sigmod Record</em>, volume 29, 427–438. ACM, 2000.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id14">ScholkopfPST+01</a></span></dt>
+<dd><p>Bernhard Schölkopf, John C Platt, John Shawe-Taylor, Alex J Smola, and Robert C Williamson. Estimating the support of a high-dimensional distribution. <em>Neural computation</em>, 13(7):1443–1471, 2001.</p>
+</dd>
+<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id7">TCFC02</a></span></dt>
+<dd><p>Jian Tang, Zhixiang Chen, Ada Wai-Chee Fu, and David W Cheung. Enhancing effectiveness of outlier detections for low density patterns. In <em>Pacific-Asia Conference on Knowledge Discovery and Data Mining</em>, 535–548. Springer, 2002.</p>
+</dd>
+</dl>
+</div>
 </section>
 </section>
 
@@ -1853,31 +1902,32 @@ producing (useful) outputs from inputs, but they are fitted only on input data.<
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">tods.detection_algorithm</a><ul>
-<li><a class="reference internal" href="#tods-detection-algorithm-autoregodetect">tods.detection_algorithm.AutoRegODetect</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-dagmm">tods.detection_algorithm.DAGMM</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-deeplog">tods.detection_algorithm.DeepLog</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-ensemble">tods.detection_algorithm.Ensemble</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-kdiscordodetect">tods.detection_algorithm.KDiscordODetect</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-lstmodetect">tods.detection_algorithm.LSTMODetect</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-matrixprofile">tods.detection_algorithm.MatrixProfile</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pcaodetect">tods.detection_algorithm.PCAODetect</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodabod">tods.detection_algorithm.PyodABOD</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodae">tods.detection_algorithm.PyodAE</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodcblof">tods.detection_algorithm.PyodCBLOF</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodcof">tods.detection_algorithm.PyodCOF</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodhbos">tods.detection_algorithm.PyodHBOS</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodisolationforest">tods.detection_algorithm.PyodIsolationForest</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodknn">tods.detection_algorithm.PyodKNN</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodloda">tods.detection_algorithm.PyodLODA</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodlof">tods.detection_algorithm.PyodLOF</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodmogaal">tods.detection_algorithm.PyodMoGaal</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodocsvm">tods.detection_algorithm.PyodOCSVM</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodsod">tods.detection_algorithm.PyodSOD</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodsogaal">tods.detection_algorithm.PyodSoGaal</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-pyodvae">tods.detection_algorithm.PyodVAE</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-systemwisedetection">tods.detection_algorithm.SystemWiseDetection</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-telemanom">tods.detection_algorithm.Telemanom</a></li>
-<li><a class="reference internal" href="#tods-detection-algorithm-uodbaseprimitive">tods.detection_algorithm.UODBasePrimitive</a></li>
+<li><a class="reference internal" href="#autoregodetect">AutoRegODetect</a></li>
+<li><a class="reference internal" href="#dagmm">DAGMM</a></li>
+<li><a class="reference internal" href="#deeplog">DeepLog</a></li>
+<li><a class="reference internal" href="#ensemble">Ensemble</a></li>
+<li><a class="reference internal" href="#kdiscordodetect">KDiscordODetect</a></li>
+<li><a class="reference internal" href="#lstmodetect">LSTMODetect</a></li>
+<li><a class="reference internal" href="#matrixprofile">MatrixProfile</a></li>
+<li><a class="reference internal" href="#pcaodetect">PCAODetect</a></li>
+<li><a class="reference internal" href="#pyodabod">PyodABOD</a></li>
+<li><a class="reference internal" href="#pyodae">PyodAE</a></li>
+<li><a class="reference internal" href="#pyodcblof">PyodCBLOF</a></li>
+<li><a class="reference internal" href="#pyodcof">PyodCOF</a></li>
+<li><a class="reference internal" href="#pyodhbos">PyodHBOS</a></li>
+<li><a class="reference internal" href="#pyodisolationforest">PyodIsolationForest</a></li>
+<li><a class="reference internal" href="#pyodknn">PyodKNN</a></li>
+<li><a class="reference internal" href="#pyodloda">PyodLODA</a></li>
+<li><a class="reference internal" href="#pyodlof">PyodLOF</a></li>
+<li><a class="reference internal" href="#pyodmogaal">PyodMoGaal</a></li>
+<li><a class="reference internal" href="#pyodocsvm">PyodOCSVM</a></li>
+<li><a class="reference internal" href="#pyodsod">PyodSOD</a></li>
+<li><a class="reference internal" href="#pyodsogaal">PyodSoGaal</a></li>
+<li><a class="reference internal" href="#pyodvae">PyodVAE</a></li>
+<li><a class="reference internal" href="#systemwisedetection">SystemWiseDetection</a></li>
+<li><a class="reference internal" href="#telemanom">Telemanom</a></li>
+<li><a class="reference internal" href="#uodbaseprimitive">UODBasePrimitive</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
 </ul>

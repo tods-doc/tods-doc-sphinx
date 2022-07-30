@@ -80,7 +80,7 @@ such pipeline description:
         print(data)
 
 Note that, in order to call each primitive during pipeline construction, one may find the index (python_path) of primitives available in
-`entry_points.ini <https://github.com/datamllab/tods/tree/master/tods/entry_points.ini>`__.
+`entry_points.ini <https://github.com/datamllab/tods/blob/master/tods/resources/.entry_points.ini>`__.
 
 The output description json file (example_pipeline.json) should look like something as follows:
 ::
@@ -103,7 +103,7 @@ The output description json file (example_pipeline.json) should look like someth
     }
 
 With the pre-built pipeline description file, we can then feed the NAB data (twitter_IBM) and specify the desired evaluation metric with the path of pipeline description file with 
-`run_pipeline.py <https://github.com/datamllab/tods/tree/master/examples/run_pipeline.py>`__.
+`run_pipeline.py <https://github.com/datamllab/tods/blob/master/examples/axolotl_interface/run_pipeline.py>`__.
 :: 
     python examples/run_pipeline.py --pipeline_path example_pipeline.json --table_path datasets/NAB/realTweets/labeled_Twitter_volume_IBM.csv --metric F1_MACRO --target_index 2
 
